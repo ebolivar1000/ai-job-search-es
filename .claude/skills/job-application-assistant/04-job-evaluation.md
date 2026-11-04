@@ -60,9 +60,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Data Engineering, Data Warehousing, ETL corporativo, Informatica PowerCenter, AWS (S3, Glue, EMR, Redshift), Python (FastAPI, PySpark, Pandas), SQL Avanzado, Teradata, Oracle PL/SQL, Snowflake, Databricks, Apache Airflow, Docker, CI/CD
+**Moderate match areas:** Desarrollo Backend & APIs (FastAPI, Express), Full Stack con React / TypeScript, Integración de APIs de Inteligencia Artificial (LLMs, OCR), BI & Reporting (Power BI, Tableau, MicroStrategy)
+**Weak match areas:** Posiciones que exijan inglés hablado fluido obligatorio (C1/C2) para llamadas diarias, desarrollo móvil nativo (iOS/Android), infraestructuras on-premise obsoletas sin plan de evolución
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for? Match on the function and nature of the work performed, not the literal job title - a "Data Consultant" and a "Data Scientist" role can be functionally identical.
@@ -74,9 +74,9 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Data Engineering, Data Warehousing, ETL/ELT pipelines, Cloud Data (AWS), Banca Minorista, Seguros, Farmacéutica, Retail
+**Moderate:** Backend Developer (Python/FastAPI/APIs), Full Stack Web Developer, Analytics Engineer, BI Specialist
+**Entry-level:** Machine Learning Engineering especializado en entrenamiento de modelos desde cero, Data Science investigativo/estadístico puro
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -107,19 +107,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Consolidar rol de Senior Data Engineer / Data Architect en proyectos modernos de Nube (AWS, Snowflake, Databricks)
+- Desarrollar servicios de backend y APIs de datos de alto rendimiento (Python FastAPI / Docker / Cloud)
+- Estabilidad laboral en esquemas 100% remotos para empresas sólidas o contratación directa a largo plazo
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: Diseño y optimización de pipelines de datos, resolución de cuellos de botella de rendimiento en bases de datos y ETL, arquitectura de APIs limpias, automatización con Docker y CI/CD
+- Tasks that drain: Tareas repetitivas manuales sin automatización, soporte de guardia 24/7 permanente sin equipo de soporte, micro-tareas freelance fragmentadas
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Preferencia por contratos de larga duración, relación de dependencia o contractor formal y estable
+- **Flexibility**: 100% Remoto desde Santa Fe, Argentina con flexibilidad horaria y comunicación asíncrona
+- **Professional development**: Tecnologías cloud vigentes, Big Data distribuido y buenas prácticas de ingeniería de software
 
 ### 6. Salary Benchmark (Optional)
 

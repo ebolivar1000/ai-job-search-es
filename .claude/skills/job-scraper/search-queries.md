@@ -1,90 +1,94 @@
-# Search Queries for Job Scraper
+# Search Queries for Job Scraper - Everth Bolivar
 
-<!-- SETUP: Customize these queries based on your skills, target roles, and location -->
+## Estrategia de Búsqueda y Portales
 
-## Installed portal CLIs (primary for `/scrape`)
+Este archivo define las búsquedas para `/scrape`. Prioriza vacantes **100% remotas** en español o con inglés técnico escrito/lectura (A2), orientadas a **Senior Data Engineer**, **Analytics Engineer**, **Backend / Full Stack Developer (Python/FastAPI/SQL)** y **ETL / Cloud Data**.
 
-`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Shipped country-agnostic CLIs include `linkedin-search` and `freehire-search`; Danish demos and any skill you add with `/add-portal` are included the same way. You do **not** need a matching `site:` line below for those CLIs to run.
+**Reglas de Plataformas:**
+- **Plataformas Activas y Confiables:** LinkedIn Jobs, Get on Board (GetOnBrd), Tecnoempleo (Teletrabajo), We Work Remotely, Torre.
+- **Plataformas Excluidas:** NO utilizar Upwork, Workana, Freelancer ni bolsas de micro-tareas de baja calidad.
 
-The `site:` query templates in this file are the **WebSearch fallback** — for portals without a CLI, company career pages, or when a CLI fails.
+---
 
-**Language scope:** write every query category in every language listed in your CLAUDE.md Languages table (typically 1-2, sometimes more). A posting requiring a language you have *not* declared, as a job condition, is excluded before scoring; a posting requiring a *higher level* than you declared in a language you *do* work in is flagged for your own judgment, not excluded — see `04-job-evaluation.md`'s Language Gate, the single source of truth for this rule. Translate each category's keywords rather than machine-translating word-for-word (e.g. "Frontend Developer" -> "Desarrollador Frontend", not a literal word-for-word translation) if you work in more than one language.
+## 1. Portales de Búsqueda Principales
 
-## Search Sites
+- **LinkedIn Jobs:** Cubierto por el CLI `.agents/skills/linkedin-search` y búsquedas WebSearch.
+  - Ubicaciones objetivo: `Remote`, `Argentina`, `Latin America`, `Spain`.
+- **Get on Board:** `getonbrd.com/jobs` - Portal referente para tecnología en Latinoamérica con roles remotos reales y empresas serias.
+- **Tecnoempleo:** `tecnoempleo.com` - Ofertas tech en español con filtro de 100% teletrabajo.
+- **We Work Remotely:** `weworkremotely.com` - Plataforma global de empleo remoto directo en ingeniería y datos.
 
-Primary (your market's job boards - scaffold one with `/add-portal`):
-- **[YOUR_JOB_BOARD]** - your market's largest general job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: [YOUR_COUNTRY] / [YOUR_CITY]); also covered by `linkedin-search` CLI
-- **[YOUR_INDUSTRY_JOB_BOARD]** - a niche/industry board for your field (optional)
-- **[YOUR_ADDITIONAL_JOB_BOARD]** - another major board for your market (optional)
+---
 
-Secondary (company career pages via Google):
-- Direct Google searches with `site:` filters for known target companies
+## 2. Categorías de Búsqueda por Prioridad
 
-## Query Categories
+### Prioridad 1: Data Engineering, Cloud & Pipelines ETL (Core)
+*Vacantes orientadas a la especialidad principal: arquitecturas de datos, pipelines distribuidos, ETL/ELT y plataformas Cloud.*
 
-Queries are grouped by priority. Write **each category in every language from your Languages table** (see Language scope above). Combine each query with your location terms (e.g. your city, region, or metro area) where the site supports it.
-
-**Organize by function, not job title.** The same underlying work carries different titles across companies and markets (a "Data Scientist" role at one employer may be posted as "Insights Analyst" or "Data Consultant" at another). Name each priority category after the function it covers, and list several plausible job titles as query variants within that category rather than betting an entire priority tier on one exact title string.
-
-### Priority 1: [YOUR_PRIMARY_ROLE_TYPE]
-
-These match your strongest and most desired career direction.
-
-```
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_2]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_KEY_SKILL]" [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_COUNTRY]
+#### Consultas LinkedIn CLI:
+```bash
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "Senior Data Engineer" -l "Remote" --remote remote --jobage 14 --format json
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "Data Engineer" -l "Argentina" --remote remote --jobage 14 --format json
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "Ingeniero de Datos" -l "Remote" --remote remote --jobage 14 --format json
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "Analytics Engineer" -l "Remote" --remote remote --jobage 14 --format json
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "ETL Developer" -l "Remote" --remote remote --jobage 14 --format json
 ```
 
-### Priority 2: [YOUR_DOMAIN_EXPERTISE]
-
-These match your domain expertise.
-
+#### Consultas WebSearch (Get on Board, Tecnoempleo, LinkedIn):
 ```
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] OR [YOUR_REGION]
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_2] [YOUR_COUNTRY]
-site:linkedin.com/jobs [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] [YOUR_COUNTRY]
-```
-
-### Priority 3: [YOUR_ADJACENT_ROLE_TYPE]
-
-Adjacent roles you could pivot into.
-
-```
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_1]" [YOUR_KEY_SKILL] [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_2]" [YOUR_KEY_SKILL] [YOUR_CITY]
+site:getonbrd.com/jobs/data-science-analytics "Data Engineer" remoto
+site:getonbrd.com/jobs/data-science-analytics "Ingeniero de Datos"
+site:getonbrd.com/jobs "AWS" "Data" remoto
+site:linkedin.com/jobs "Senior Data Engineer" "Remote" Argentina OR LATAM
+site:linkedin.com/jobs "Data Engineer" ("Snowflake" OR "Databricks" OR "Glue" OR "Airflow") remote
+site:tecnoempleo.com "Data Engineer" teletrabajo
 ```
 
-### Priority 4: Broader Technical / Consulting
+---
 
-Wider net for general technical roles.
+### Prioridad 2: Backend Development, Python & APIs (FastAPI / SQL)
+*Vacantes de desarrollo backend, APIs RESTful y aplicaciones de datos basadas en Python, SQL avanzado y servicios Cloud.*
 
+#### Consultas LinkedIn CLI:
+```bash
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "Senior Python Developer" -l "Remote" --remote remote --jobage 14 --format json
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "Python FastAPI" -l "Remote" --remote remote --jobage 14 --format json
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "Backend Developer Python" -l "Argentina" --remote remote --jobage 14 --format json
 ```
-site:[YOUR_JOB_BOARD] [YOUR_KEY_SKILL] developer [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_KEY_SKILL] developer" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "technical consultant" [YOUR_DOMAIN] [YOUR_CITY]
+
+#### Consultas WebSearch (Get on Board & LinkedIn):
+```
+site:getonbrd.com/jobs/programming "Python" "FastAPI" remoto
+site:getonbrd.com/jobs/programming "Backend" "Python" remoto
+site:linkedin.com/jobs "Python Backend Developer" "FastAPI" "Remote"
+site:linkedin.com/jobs "Full Stack Developer" "Python" "React" remote Argentina
+site:weworkremotely.com "Python" "Data" remote
 ```
 
-## Location Filter
+---
 
-When evaluating results, verify the job location is within reasonable commute distance from your home. Define acceptable areas:
-- [YOUR_CITY] and surrounding areas
-- [ACCEPTABLE_AREA_1]
-- [ACCEPTABLE_AREA_2]
-- [BORDERLINE_AREA] (borderline - ~X min by transit)
-- [TOO_FAR_AREA] (too far)
+### Prioridad 3: Big Data, Data Warehousing & Plataformas Corporativas
+*Roles especializados en arquitecturas empresariales de datos: Snowflake, Databricks, Redshift, Teradata, Airflow y PowerCenter.*
 
-## Language Filter
+#### Consultas LinkedIn CLI:
+```bash
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "Snowflake Data Engineer" -l "Remote" --remote remote --jobage 14 --format json
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "Databricks Engineer" -l "Remote" --remote remote --jobage 14 --format json
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "Data Warehouse Architect" -l "Remote" --remote remote --jobage 14 --format json
+```
 
-Your working languages and levels are in CLAUDE.md's Languages table. When filtering scraped results, apply `04-job-evaluation.md`'s Language Gate: a posting requiring a language you haven't declared at all is excluded; a posting requiring a higher level than you declared in a language you do work in is not excluded, flag it clearly instead (see `job-scraper/SKILL.md`'s Step 3 "Quick Fit Assessment" for how the flag surfaces in `/scrape` output). Postings simply *written* in a language you don't work in, that don't require it on the job, are fine.
+#### Consultas WebSearch:
+```
+site:linkedin.com/jobs "Data Warehouse" ("Redshift" OR "Snowflake" OR "Teradata") remote
+site:linkedin.com/jobs "Informatica PowerCenter" remote
+site:getonbrd.com/jobs "Data" ("Airflow" OR "Spark") remoto
+```
 
-## Date Filter
+---
 
-Only include jobs posted within the last 14 days, or with an application deadline that has not yet passed. If a posting date cannot be determined, include it but flag as "date unknown".
+## 3. Filtros y Criterios de Selección
 
-## Adapting Queries
-
-If the user specifies a focus area, select queries from the matching category and also generate 2-3 custom queries for that focus. For example:
-- "/scrape [focus_area]" -> relevant category queries + custom focus-specific queries
+- **Modalidad:** 100% Remoto (Home Office permanente).
+- **Idioma de Trabajo:** Español o bilingüe técnico con inglés enfocado en lectura/escritura (A2/B1 técnico). Descartar vacantes que exijan inglés C1/C2 nativo hablado fluido con clientes internacionales angloparlantes de forma diaria.
+- **Tipo de Contratación:** Empleo directo por la empresa o intermediario corporativo serio (relación de dependencia, contratación de servicios/contractor a mediano/largo plazo).
+- **Exclusiones:** Se descartan proyectos de micro-freelance por hora en plataformas estilo Upwork/Workana.
