@@ -1,0 +1,41 @@
+name: Daily Job Search Digest
+
+on:
+  schedule:
+    # 7:33 AM Hora de Argentina (UTC-3) -> 10:33 AM UTC
+    - cron: '33 10 * * *'
+  workflow_dispatch: # Permite ejecutar la búsqueda manualmente desde la web de GitHub
+
+jobs:
+  job-digest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Para guardar y sincronizar el historial de vacantes vistas
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Run Daily Job Digest
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER || 'ebolivar1000@gmail.com' }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          python tools/daily_job_digest.py
+
+      - name: Commit updated seen_jobs.json
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f job_scraper/seen_jobs.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(tracker): actualizar historial de vacantes vistas [skip ci]" && git push)
