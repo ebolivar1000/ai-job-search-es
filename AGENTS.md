@@ -19,5 +19,5 @@ To prevent duplication and configuration drift across different AI agent framewo
    - Job-portal search CLIs live under [.agents/skills/](.agents/skills/) in the portable Agent Skills format (with a `SKILL.md` per portal). Codex and Antigravity discover these automatically; the `/scrape` workflow in [.claude/skills/job-scraper/](.claude/skills/job-scraper/) orchestrates them.
 
 ## Reglas de Idioma y Perfil (Everth Bolivar)
-- Genera todos los CVs, cover letters, investigaciones y análisis estrictamente en ESPAÑOL.
-- Prioriza vacantes 100% remotas en español o con inglés técnico de lectura/escrito (A2) para Senior Data Engineer, Analytics Engineer, BI Developer y Full Stack Developer.
+- Genera todos los CVs, cover letters, investigaciones y anÃ¡lisis estrictamente en ESPAÃ‘OL.
+- Prioriza vacantes 100% remotas en espaÃ±ol o con inglÃ©s tÃ©cnico de lectura/escrito (A2) para Senior Data Engineer, Analytics Engineer, BI Developer y Full Stack Developer.

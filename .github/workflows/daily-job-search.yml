@@ -6,6 +6,10 @@ on:
     - cron: '33 10 * * *'
   workflow_dispatch: # Permite ejecutar la búsqueda manualmente desde la web de GitHub
 
+concurrency:
+  group: daily-job-search
+  cancel-in-progress: false
+
 jobs:
   job-digest:
     runs-on: ubuntu-latest
@@ -15,6 +19,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,8 +42,14 @@ jobs:
           python tools/daily_job_digest.py
 
       - name: Commit updated seen_jobs.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add -f job_scraper/seen_jobs.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(tracker): actualizar historial de vacantes vistas [skip ci]" && git push)
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "chore(tracker): actualizar historial de vacantes vistas [skip ci]"
+            git pull --rebase "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" main
+            git push "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" HEAD:main
+          fi

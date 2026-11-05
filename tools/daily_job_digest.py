@@ -6,6 +6,7 @@ and Python/FastAPI roles, deduplicates against seen jobs, and sends
 an HTML summary email to ebolivar1000@gmail.com.
 """
 
+import argparse
 import datetime
 import json
 import os
@@ -171,14 +172,14 @@ def generate_html_email(new_jobs: list, today_str: str) -> str:
     return html
 
 
-def send_email(subject: str, html_content: str, recipient: str):
+def send_email(subject: str, html_content: str, recipient: str) -> bool:
     """Send HTML email via Gmail SMTP using App Password."""
     smtp_user = os.environ.get("GMAIL_USER", "ebolivar1000@gmail.com")
     smtp_password = os.environ.get("GMAIL_APP_PASSWORD")
 
     if not smtp_password:
-        print("[WARN] GMAIL_APP_PASSWORD is not set. Email notification skipped.", file=sys.stderr)
-        print(f"[INFO] Prepared '{subject}' for {recipient}")
+        print("[WARN] GMAIL_APP_PASSWORD no está configurado en las variables de entorno ni en GitHub Secrets.", file=sys.stderr)
+        print(f"[INFO] Resumen preparado: '{subject}' para {recipient} (envío omitido por falta de contraseña).")
         return False
 
     msg = MIMEMultipart("alternative")
@@ -196,14 +197,18 @@ def send_email(subject: str, html_content: str, recipient: str):
             server.ehlo()
             server.login(smtp_user, smtp_password)
             server.sendmail(smtp_user, recipient, msg.as_string())
-        print(f"[OK] Email sent successfully to {recipient}!")
+        print(f"[OK] Correo enviado exitosamente a {recipient}!")
         return True
     except Exception as e:
-        print(f"[ERROR] Failed to send email via SMTP: {e}", file=sys.stderr)
+        print(f"[ERROR] Error al enviar correo vía SMTP a {recipient}: {e}", file=sys.stderr)
         return False
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Daily Job Digest & Notification")
+    parser.add_argument("--force-save", action="store_true", help="Guardar vacantes en seen_jobs.json incluso si no se envía el correo")
+    args = parser.parse_args()
+
     bun_bin = find_bun()
     print(f"[INFO] Using Bun binary: {bun_bin}")
 
@@ -264,15 +269,35 @@ def main():
     print(f"[INFO] New (unseen) jobs found: {len(new_jobs)}")
 
     if new_jobs:
-        # Save updated seen jobs
-        seen_data["seen"] = seen_dict
-        save_seen_jobs(seen_data)
-        print(f"[INFO] Saved {len(new_jobs)} new entries to seen_jobs.json")
-
         subject = f"[AI Job Search] {len(new_jobs)} nuevas vacantes remotas encontradas ({today_str})"
         html_body = generate_html_email(new_jobs, today_str)
-        recipient = "ebolivar1000@gmail.com"
-        send_email(subject, html_body, recipient)
+        recipient = os.environ.get("GMAIL_USER", "ebolivar1000@gmail.com")
+        email_sent = send_email(subject, html_body, recipient)
+
+        if email_sent or args.force_save:
+            # Save updated seen jobs
+            seen_data["seen"] = seen_dict
+            save_seen_jobs(seen_data)
+            print(f"[INFO] Saved {len(new_jobs)} new entries to seen_jobs.json")
+        else:
+            if os.environ.get("GITHUB_ACTIONS") == "true":
+                if not os.environ.get("GMAIL_APP_PASSWORD"):
+                    print(
+                        "\n::error title=Falta secreto GMAIL_APP_PASSWORD::El secreto 'GMAIL_APP_PASSWORD' no está configurado en GitHub Secrets.\n"
+                        "Para recibir los correos diarios en tu bandeja de entrada:\n"
+                        "1. Ve a tu repositorio: Settings -> Secrets and variables -> Actions\n"
+                        "2. Haz clic en 'New repository secret'\n"
+                        "3. Nombre: GMAIL_APP_PASSWORD\n"
+                        "4. Valor: Contraseña de aplicación de Gmail (16 caracteres generada en https://myaccount.google.com/apppasswords)\n"
+                        "5. Las vacantes encontradas hoy se guardarán automáticamente una vez esté configurado el correo.\n",
+                        file=sys.stderr,
+                    )
+                    sys.exit(1)
+                else:
+                    print("::error title=Error SMTP::Falló el envío del correo con las credenciales de Gmail.", file=sys.stderr)
+                    sys.exit(1)
+            else:
+                print("[WARN] Correo no enviado; no se modificó seen_jobs.json para que las vacantes no se pierdan en futuras búsquedas.")
     else:
         print("[INFO] No new jobs today. Skipping email.")
 
