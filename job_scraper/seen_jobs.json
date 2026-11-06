@@ -1691,6 +1691,42 @@
       "fit": "high",
       "portal": "LinkedIn",
       "source": "cli"
+    },
+    "4449885308": {
+      "title": "TTT Data/ELT Engineer Senior - EY Global Delivery Services",
+      "company": "EY",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ttt-data-elt-engineer-senior-ey-global-delivery-services-at-ey-4449885308",
+      "date": "2026-11-06",
+      "first_seen": "2026-11-06T17:38:02.890110+00:00",
+      "status": "new",
+      "fit": "high",
+      "portal": "LinkedIn",
+      "source": "cli"
+    },
+    "4486231829": {
+      "title": "Senior Data Engineer | Databricks",
+      "company": "Indra Group",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/senior-data-engineer-databricks-at-indra-group-4486231829",
+      "date": "2026-11-06",
+      "first_seen": "2026-11-06T17:38:02.890110+00:00",
+      "status": "new",
+      "fit": "high",
+      "portal": "LinkedIn",
+      "source": "cli"
+    },
+    "4468017128": {
+      "title": "Data Engineer",
+      "company": "Mindgruve",
+      "location": "Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/data-engineer-at-mindgruve-4468017128",
+      "date": "2026-10-31",
+      "first_seen": "2026-11-06T17:38:02.890110+00:00",
+      "status": "new",
+      "fit": "high",
+      "portal": "LinkedIn",
+      "source": "cli"
     }
   }
 }
