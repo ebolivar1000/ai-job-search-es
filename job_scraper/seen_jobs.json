@@ -1883,6 +1883,66 @@
       "fit": "high",
       "portal": "LinkedIn",
       "source": "cli"
+    },
+    "4403817522": {
+      "title": "Data Engineer",
+      "company": "Chevron",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/data-engineer-at-chevron-4403817522",
+      "date": "2026-11-07",
+      "first_seen": "2026-11-08T16:45:11.904653+00:00",
+      "status": "new",
+      "fit": "high",
+      "portal": "LinkedIn",
+      "source": "cli"
+    },
+    "4476483257": {
+      "title": "Sr. Software Engineer",
+      "company": "AlertMedia",
+      "location": "México, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/sr-software-engineer-at-alertmedia-4476483257",
+      "date": "2026-11-05",
+      "first_seen": "2026-11-08T16:45:11.904653+00:00",
+      "status": "new",
+      "fit": "high",
+      "portal": "LinkedIn",
+      "source": "cli"
+    },
+    "4486684750": {
+      "title": "Consultor/a Data Engineer (Azure Synapse)",
+      "company": "Minsait",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/consultor-a-data-engineer-azure-synapse-at-minsait-4486684750",
+      "date": "2026-11-08",
+      "first_seen": "2026-11-08T16:45:11.904653+00:00",
+      "status": "new",
+      "fit": "high",
+      "portal": "LinkedIn",
+      "source": "cli"
+    },
+    "4436117552": {
+      "title": "Data Engineer Junior / Intermediate",
+      "company": "VASS",
+      "location": "Bogotá, Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/data-engineer-junior-intermediate-at-vass-4436117552",
+      "date": "2026-11-08",
+      "first_seen": "2026-11-08T16:45:11.904653+00:00",
+      "status": "new",
+      "fit": "high",
+      "portal": "LinkedIn",
+      "source": "cli"
+    },
+    "4477720207": {
+      "title": "IT Data Engineer I MXT",
+      "company": "Tyson Mexico",
+      "location": "El Fresno, Coahuila, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/it-data-engineer-i-mxt-at-tyson-mexico-4477720207",
+      "date": "2026-11-07",
+      "first_seen": "2026-11-08T16:45:11.904653+00:00",
+      "status": "new",
+      "fit": "high",
+      "portal": "LinkedIn",
+      "source": "cli"
     }
   }
 }
