@@ -532,16 +532,26 @@ def send_email(subject: str, html_content: str, recipient: str) -> bool:
                 try:
                     print(f"[INFO] Intentando enviar correo vía {cfg['name']} (intento {attempt}/{max_attempts_per_config})...")
                     if cfg["ssl"]:
+                        print(f"  -> Conectando a smtp.gmail.com:{cfg['port']} con SSL...")
                         with smtplib.SMTP_SSL("smtp.gmail.com", cfg["port"], context=ssl_context, timeout=30) as server:
+                            print("  -> Conexión establecida. Enviando EHLO...")
                             server.ehlo()
+                            print(f"  -> Autenticando usuario '{smtp_user}'...")
                             server.login(smtp_user, smtp_password)
+                            print(f"  -> Autenticado exitosamente. Enviando mensaje a '{recipient}'...")
                             server.sendmail(smtp_user, recipient, msg.as_string())
                     else:
+                        print(f"  -> Conectando a smtp.gmail.com:{cfg['port']}...")
                         with smtplib.SMTP("smtp.gmail.com", cfg["port"], timeout=30) as server:
+                            print("  -> Conexión establecida. Enviando EHLO...")
                             server.ehlo()
+                            print("  -> Iniciando STARTTLS...")
                             server.starttls(context=ssl_context)
+                            print("  -> STARTTLS completado. Enviando segundo EHLO...")
                             server.ehlo()
+                            print(f"  -> Autenticando usuario '{smtp_user}'...")
                             server.login(smtp_user, smtp_password)
+                            print(f"  -> Autenticado exitosamente. Enviando mensaje a '{recipient}'...")
                             server.sendmail(smtp_user, recipient, msg.as_string())
 
                     print(f"[OK] Correo enviado exitosamente a {recipient} usando {cfg['name']}!")
