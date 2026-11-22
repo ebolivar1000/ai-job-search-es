@@ -3,17 +3,21 @@
 
 Executes priority searches for remote Senior Data Engineer, Cloud ETL,
 and Python/FastAPI roles in Spanish-speaking countries and Latin America
-across LinkedIn and Get on Board, deduplicates against seen jobs, and
-sends an HTML summary email to ebolivar1000@gmail.com.
+across LinkedIn and Get on Board, scores vacancies against candidate profile,
+deduplicates against seen jobs, and sends an HTML summary email to ebolivar1000@gmail.com.
 """
 
 import argparse
 import datetime
 import json
 import os
+import re
 import smtplib
+import socket
+import ssl
 import subprocess
 import sys
+import time
 import urllib.request
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -32,21 +36,29 @@ LINKEDIN_CLI = REPO_ROOT / ".agents" / "skills" / "linkedin-search" / "cli" / "s
 
 # Search configurations for LinkedIn (restricted to Hispanic countries & LATAM)
 LINKEDIN_QUERIES = [
-    # Argentina
+    # Argentina (Prioridad local y regional)
     {"query": "Senior Data Engineer", "location": "Argentina", "remote": "remote"},
     {"query": "Data Engineer", "location": "Argentina", "remote": "remote"},
     {"query": "Python FastAPI", "location": "Argentina", "remote": "remote"},
-    # Latinoamérica
-    {"query": "Data Engineer", "location": "Latin America", "remote": "remote"},
+    {"query": "Senior Python Developer", "location": "Argentina", "remote": "remote"},
+    {"query": "ETL Developer", "location": "Argentina", "remote": "remote"},
+    # Latinoamérica (100% Remoto en español / inglés técnico)
     {"query": "Senior Data Engineer", "location": "Latin America", "remote": "remote"},
+    {"query": "Data Engineer", "location": "Latin America", "remote": "remote"},
     {"query": "Analytics Engineer", "location": "Latin America", "remote": "remote"},
+    {"query": "Snowflake Data Engineer", "location": "Latin America", "remote": "remote"},
+    {"query": "Databricks Engineer", "location": "Latin America", "remote": "remote"},
+    {"query": "AWS Data Engineer", "location": "Latin America", "remote": "remote"},
     {"query": "Python Backend", "location": "Latin America", "remote": "remote"},
-    # España (100% teletrabajo en español)
+    # España (100% Teletrabajo en español)
     {"query": "Data Engineer", "location": "Spain", "remote": "remote"},
     {"query": "Ingeniero de Datos", "location": "Spain", "remote": "remote"},
-    # Colombia & México
+    {"query": "Senior Data Engineer", "location": "Spain", "remote": "remote"},
+    # Colombia & México (Principales hubs tecnológicos de LATAM)
     {"query": "Data Engineer", "location": "Colombia", "remote": "remote"},
+    {"query": "Senior Data Engineer", "location": "Colombia", "remote": "remote"},
     {"query": "Data Engineer", "location": "Mexico", "remote": "remote"},
+    {"query": "Senior Data Engineer", "location": "Mexico", "remote": "remote"},
 ]
 
 # Get on Board categories & keywords
@@ -62,6 +74,14 @@ GETONBOARD_KEYWORDS = [
     "databricks",
     "backend",
     "big data",
+    "aws glue",
+    "redshift",
+    "airflow",
+    "spark",
+    "pyspark",
+    "data warehouse",
+    "powercenter",
+    "teradata",
 ]
 
 # Geographic filters for Spanish-speaking / LATAM roles
@@ -96,6 +116,88 @@ DISALLOWED_LOCATIONS = {
     "ireland", "dublin",
     "singapore", "new zealand", "switzerland", "sweden", "austria", "belgium", "denmark", "norway", "finland"
 }
+
+# Skill patterns for candidate profile scoring (Everth Bolivar)
+SKILL_PATTERNS = [
+    ("Snowflake", r"\bsnowflake\b"),
+    ("Databricks", r"\bdatabricks\b"),
+    ("AWS / Cloud", r"\b(aws|glue|redshift|s3|emr)\b"),
+    ("Airflow", r"\bairflow\b"),
+    ("Spark / PySpark", r"\b(spark|pyspark)\b"),
+    ("FastAPI", r"\bfastapi\b"),
+    ("Python", r"\bpython\b"),
+    ("ETL / Pipelines", r"\b(etl|elt|pipeline[s]?)\b"),
+    ("Data Warehouse", r"\b(data\s*warehouse|dwh|data\s*mart)\b"),
+    ("Informatica / PowerCenter", r"\b(informatica|powercenter)\b"),
+    ("SQL / Relacional", r"\b(sql|postgresql|postgres|oracle|teradata)\b"),
+    ("Analytics Engineer", r"\banalytics\s*engineer\b"),
+    ("Data Engineer", r"\b(data\s*engineer|ingeniero\s*de\s*datos)\b"),
+    ("Backend", r"\bbackend\b"),
+    ("Big Data", r"\bbig\s*data\b"),
+    ("Docker", r"\bdocker\b"),
+]
+
+NEGATIVE_PATTERNS = [
+    r"\b(junior|jr|trainee|intern|practicante|pasante)\b",
+    r"\b(php|wordpress|ruby|rails|\.net|c#|flutter|swift|ios|android)\b",
+    r"\b(qa\s*tester|qa\s*manual|scrum\s*master|ux|ui\s*designer)\b",
+]
+
+
+def score_and_enrich_job(job: dict) -> tuple[int, str, list[str]]:
+    """Score a job against Everth Bolivar's Senior Data Engineer / Python FastAPI profile."""
+    title = (job.get("title") or "").strip()
+    company = (job.get("company") or "").strip()
+    location = (job.get("location") or "").strip()
+    text = f"{title} {company} {location}".lower()
+
+    # Disqualification / heavy penalty for junior or unrelated stacks
+    for neg in NEGATIVE_PATTERNS:
+        if re.search(neg, text):
+            return 10, "BAJO", []
+
+    score = 40  # base score for remote tech in Hispanic/LATAM region
+
+    # Seniority bonus
+    if re.search(r"\b(senior|sr|lead|principal|architect|arquitecto|staff)\b", text):
+        score += 25
+    elif re.search(r"\b(semi[- ]?senior|ssr)\b", text):
+        score += 10
+
+    # Core Data Engineer / Architecture match
+    if re.search(r"\b(data\s*engineer|ingeniero\s*de\s*datos|analytics\s*engineer|etl\s*developer|data\s*architect)\b", text):
+        score += 25
+
+    # Core Python / Backend match
+    if re.search(r"\b(python\s*backend|backend\s*developer|python\s*developer|fastapi)\b", text):
+        score += 20
+
+    matched_skills = []
+    for skill_name, pattern in SKILL_PATTERNS:
+        if re.search(pattern, text):
+            matched_skills.append(skill_name)
+            if skill_name in ["Snowflake", "Databricks", "AWS / Cloud", "Airflow", "Spark / PySpark", "FastAPI"]:
+                score += 15
+            elif skill_name in ["Python", "ETL / Pipelines", "Data Warehouse"]:
+                score += 10
+            elif skill_name in ["SQL / Relacional", "Informatica / PowerCenter"]:
+                score += 8
+            else:
+                score += 5
+
+    # Cap between 10 and 100
+    final_score = max(10, min(100, score))
+
+    if final_score >= 80:
+        fit_level = "EXCELENTE"
+    elif final_score >= 65:
+        fit_level = "ALTO"
+    elif final_score >= 45:
+        fit_level = "BUENO"
+    else:
+        fit_level = "GENERAL"
+
+    return final_score, fit_level, matched_skills
 
 
 def is_hispanic_or_latam_job(job: dict) -> bool:
@@ -247,8 +349,11 @@ def run_getonboard_search() -> list:
 
 
 def generate_html_email(new_jobs: list, today_str: str) -> str:
-    """Build a modern, clean HTML email template."""
+    """Build a modern, clean HTML email template with matching score badges and extracted tech tags."""
     job_cards_html = ""
+    excellent_count = sum(1 for j in new_jobs if j.get("fit_score", 0) >= 80)
+    high_count = sum(1 for j in new_jobs if 65 <= j.get("fit_score", 0) < 80)
+
     for j in new_jobs:
         title = j.get("title", "Posición sin título")
         company = j.get("company", "Empresa no especificada")
@@ -256,24 +361,49 @@ def generate_html_email(new_jobs: list, today_str: str) -> str:
         url = j.get("url", "#")
         date_posted = j.get("date", "Reciente")
         portal = j.get("portal", "LinkedIn")
+        score = j.get("fit_score", 50)
+        fit_level = j.get("fit_level", "BUENO")
+        skills = j.get("matched_skills", [])
 
         portal_bg = "#0077b5" if portal == "LinkedIn" else "#00b493"
 
+        if fit_level == "EXCELENTE":
+            fit_badge = f'<span style="background-color: #fef08a; color: #854d0e; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 9999px; border: 1px solid #fde047; margin-right: 6px;">🌟 Match {score}% · Excelente</span>'
+            border_left = "4px solid #eab308"
+        elif fit_level == "ALTO":
+            fit_badge = f'<span style="background-color: #dbeafe; color: #1e40af; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 9999px; border: 1px solid #bfdbfe; margin-right: 6px;">⭐ Match {score}% · Alto</span>'
+            border_left = "4px solid #3b82f6"
+        else:
+            fit_badge = f'<span style="background-color: #f1f5f9; color: #334155; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 9999px; margin-right: 6px;">🎯 Match {score}%</span>'
+            border_left = "4px solid #cbd5e1"
+
+        skills_pills_html = ""
+        if skills:
+            pills = "".join(
+                f'<span style="display: inline-block; background-color: #f8fafc; color: #475569; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 4px; border: 1px solid #e2e8f0; margin-right: 4px; margin-bottom: 4px;">{s}</span>'
+                for s in skills[:6]
+            )
+            skills_pills_html = f'<div style="margin-top: 8px; margin-bottom: 10px;">{pills}</div>'
+
         job_cards_html += f"""
-        <div style="background-color: #ffffff; border-radius: 8px; border: 1px solid #e2e8f0; padding: 18px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
-                <h3 style="margin: 0; color: #1e293b; font-size: 17px; font-weight: 600;">{title}</h3>
+        <div style="background-color: #ffffff; border-radius: 8px; border: 1px solid #e2e8f0; border-left: {border_left}; padding: 18px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; flex-wrap: wrap; gap: 6px;">
+                <h3 style="margin: 0; color: #1e293b; font-size: 17px; font-weight: 600; flex: 1; min-width: 250px;">{title}</h3>
                 <div>
+                    {fit_badge}
                     <span style="background-color: {portal_bg}; color: #ffffff; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 9999px; margin-right: 4px;">{portal}</span>
                     <span style="background-color: #e0f2fe; color: #0369a1; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 9999px;">100% Remoto</span>
                 </div>
             </div>
-            <p style="margin: 0 0 12px 0; color: #475569; font-size: 14px;">
+            <p style="margin: 0 0 4px 0; color: #475569; font-size: 14px;">
                 🏢 <strong>{company}</strong> &nbsp;|&nbsp; 📍 {loc} &nbsp;|&nbsp; 📅 {date_posted}
             </p>
-            <a href="{url}" target="_blank" style="display: inline-block; background-color: #2563eb; color: #ffffff; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 500;">
-                Ver Vacante en {portal} &rarr;
-            </a>
+            {skills_pills_html}
+            <div style="margin-top: 10px;">
+                <a href="{url}" target="_blank" style="display: inline-block; background-color: #2563eb; color: #ffffff; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 500;">
+                    Ver Vacante en {portal} &rarr;
+                </a>
+            </div>
         </div>
         """
 
@@ -289,16 +419,21 @@ def generate_html_email(new_jobs: list, today_str: str) -> str:
         <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
             <div style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); padding: 28px 24px; color: #ffffff;">
                 <h1 style="margin: 0 0 6px 0; font-size: 22px; font-weight: 700;">🎯 Resumen Diario de Empleo</h1>
-                <p style="margin: 0; font-size: 14px; opacity: 0.9;">
+                <p style="margin: 0; font-size: 14px; opacity: 0.95;">
                     Búsqueda activa para <strong>Everth Bolivar</strong> &bull; {today_str}
                 </p>
-                <p style="margin: 4px 0 0 0; font-size: 12px; opacity: 0.8;">
-                    🌍 Filtrado exclusivo: Países Hispanohablantes & Latinoamérica (LinkedIn + Get on Board)
+                <p style="margin: 4px 0 0 0; font-size: 12px; opacity: 0.85;">
+                    💼 Senior Data Engineer &bull; Cloud ETL (Snowflake, Databricks, AWS) &bull; Python / FastAPI
                 </p>
+                <div style="margin-top: 14px;">
+                    <span style="display: inline-block; background-color: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 6px; font-size: 12px; margin-right: 6px;">📊 Total nuevas: <strong>{len(new_jobs)}</strong></span>
+                    <span style="display: inline-block; background-color: rgba(254,240,138,0.3); color: #fef08a; padding: 4px 10px; border-radius: 6px; font-size: 12px; margin-right: 6px;">🌟 Calce Excelente: <strong>{excellent_count}</strong></span>
+                    <span style="display: inline-block; background-color: rgba(219,234,254,0.3); color: #dbeafe; padding: 4px 10px; border-radius: 6px; font-size: 12px;">⭐ Calce Alto: <strong>{high_count}</strong></span>
+                </div>
             </div>
             <div style="padding: 24px; background-color: #f1f5f9;">
                 <p style="margin: 0 0 18px 0; font-size: 15px; color: #334155;">
-                    Se encontraron <strong>{len(new_jobs)} nuevas vacantes</strong> acordes a tu perfil de <em>Senior Data Engineer, Cloud & Python/FastAPI</em>:
+                    Se encontraron <strong>{len(new_jobs)} nuevas vacantes</strong> ordenadas por compatibilidad con tu perfil:
                 </p>
                 {job_cards_html}
             </div>
@@ -312,10 +447,52 @@ def generate_html_email(new_jobs: list, today_str: str) -> str:
     return html
 
 
+def write_github_step_summary(new_jobs: list, today_str: str):
+    """Write an interactive Markdown summary table to $GITHUB_STEP_SUMMARY if available."""
+    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not summary_path:
+        return
+    try:
+        lines = [
+            f"# 🎯 Resumen Diario de Empleo - {today_str}",
+            "",
+            f"Se encontraron **{len(new_jobs)} nuevas vacantes remotas** en español / LATAM acordes al perfil de **Everth Bolivar** (Senior Data Engineer | Cloud ETL & Python FastAPI).",
+            "",
+            "| Calce | Posición | Empresa | Portal | Ubicación | Tags Tecnológicos |",
+            "|:---:|:---|:---|:---:|:---|:---|",
+        ]
+        for j in new_jobs:
+            score = j.get("fit_score", 50)
+            fit_level = j.get("fit_level", "BUENO")
+            title = j.get("title", "Posición")
+            url = j.get("url", "#")
+            company = j.get("company", "Empresa")
+            portal = j.get("portal", "LinkedIn")
+            loc = j.get("location", "Remoto")
+            skills = ", ".join(f"`{s}`" for s in j.get("matched_skills", [])) or "-"
+
+            if fit_level == "EXCELENTE":
+                badge = f"🌟 **{score}%**"
+            elif fit_level == "ALTO":
+                badge = f"⭐ **{score}%**"
+            else:
+                badge = f"🎯 {score}%"
+
+            lines.append(f"| {badge} | [{title}]({url}) | {company} | **{portal}** | {loc} | {skills} |")
+
+        lines.append("")
+        with open(summary_path, "a", encoding="utf-8") as f:
+            f.write("\n".join(lines) + "\n")
+        print(f"[INFO] Resumen de {len(new_jobs)} vacantes agregado a GITHUB_STEP_SUMMARY.")
+    except Exception as e:
+        print(f"[WARN] Error al escribir en GITHUB_STEP_SUMMARY: {e}", file=sys.stderr)
+
+
 def send_email(subject: str, html_content: str, recipient: str) -> bool:
-    """Send HTML email via Gmail SMTP using App Password."""
-    smtp_user = os.environ.get("GMAIL_USER", "ebolivar1000@gmail.com")
-    smtp_password = os.environ.get("GMAIL_APP_PASSWORD")
+    """Send HTML email via Gmail SMTP using App Password with resilient IPv4, SSL/TLS, and retries."""
+    smtp_user = os.environ.get("GMAIL_USER", "ebolivar1000@gmail.com").strip()
+    raw_password = os.environ.get("GMAIL_APP_PASSWORD", "")
+    smtp_password = raw_password.replace(" ", "").strip()
 
     if not smtp_password:
         print("[WARN] GMAIL_APP_PASSWORD no está configurado en las variables de entorno ni en GitHub Secrets.", file=sys.stderr)
@@ -330,23 +507,64 @@ def send_email(subject: str, html_content: str, recipient: str) -> bool:
     part = MIMEText(html_content, "html", "utf-8")
     msg.attach(part)
 
+    # Force IPv4 resolution in getaddrinfo during SMTP connection to prevent IPv6 dropouts in cloud runners
+    original_getaddrinfo = socket.getaddrinfo
+
+    def ipv4_getaddrinfo(host, port, family=0, type=0, proto=0, flags=0):
+        return original_getaddrinfo(host, port, socket.AF_INET, type, proto, flags)
+
+    ssl_context = ssl.create_default_context()
+
+    # Connection methods to attempt in order of cloud resilience:
+    # 1. Port 465 (Implicit SSL/TLS) - Recommended for automated scripts, avoids STARTTLS handshake drops
+    # 2. Port 587 (Explicit STARTTLS)
+    configs = [
+        {"port": 465, "ssl": True, "name": "Puerto 465 (SSL)"},
+        {"port": 587, "ssl": False, "name": "Puerto 587 (STARTTLS)"},
+    ]
+
+    max_attempts_per_config = 3
+
     try:
-        with smtplib.SMTP("smtp.gmail.com", 587) as server:
-            server.ehlo()
-            server.starttls()
-            server.ehlo()
-            server.login(smtp_user, smtp_password)
-            server.sendmail(smtp_user, recipient, msg.as_string())
-        print(f"[OK] Correo enviado exitosamente a {recipient}!")
-        return True
-    except Exception as e:
-        print(f"[ERROR] Error al enviar correo vía SMTP a {recipient}: {e}", file=sys.stderr)
-        return False
+        socket.getaddrinfo = ipv4_getaddrinfo
+        for cfg in configs:
+            for attempt in range(1, max_attempts_per_config + 1):
+                try:
+                    print(f"[INFO] Intentando enviar correo vía {cfg['name']} (intento {attempt}/{max_attempts_per_config})...")
+                    if cfg["ssl"]:
+                        with smtplib.SMTP_SSL("smtp.gmail.com", cfg["port"], context=ssl_context, timeout=30) as server:
+                            server.ehlo()
+                            server.login(smtp_user, smtp_password)
+                            server.sendmail(smtp_user, recipient, msg.as_string())
+                    else:
+                        with smtplib.SMTP("smtp.gmail.com", cfg["port"], timeout=30) as server:
+                            server.ehlo()
+                            server.starttls(context=ssl_context)
+                            server.ehlo()
+                            server.login(smtp_user, smtp_password)
+                            server.sendmail(smtp_user, recipient, msg.as_string())
+
+                    print(f"[OK] Correo enviado exitosamente a {recipient} usando {cfg['name']}!")
+                    return True
+                except smtplib.SMTPAuthenticationError as auth_err:
+                    print(f"[ERROR] Error de autenticación SMTP de Gmail (535): {auth_err}", file=sys.stderr)
+                    print("[ERROR] Verifica que el secreto GMAIL_APP_PASSWORD en GitHub contenga una contraseña de aplicación válida (16 caracteres).", file=sys.stderr)
+                    return False  # Do not retry if credentials are explicitly rejected
+                except Exception as e:
+                    print(f"[WARN] Falló intento {attempt} con {cfg['name']}: {type(e).__name__} - {e}", file=sys.stderr)
+                    if attempt < max_attempts_per_config:
+                        time.sleep(2 * attempt)
+    finally:
+        socket.getaddrinfo = original_getaddrinfo
+
+    print(f"[ERROR] No se pudo enviar el correo a {recipient} tras agotar todos los protocolos y reintentos.", file=sys.stderr)
+    return False
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Daily Job Digest & Notification")
+    parser = argparse.ArgumentParser(description="Daily Job Digest & Notification for Everth Bolivar")
     parser.add_argument("--force-save", action="store_true", help="Guardar vacantes en seen_jobs.json incluso si no se envía el correo")
+    parser.add_argument("--dry-run", action="store_true", help="Ejecutar búsqueda y reporte sin enviar correo ni alterar historial")
     args = parser.parse_args()
 
     bun_bin = find_bun()
@@ -400,6 +618,17 @@ def main():
         if url in stored_urls or (comp, tit) in stored_pairs:
             continue
 
+        # Score job against candidate profile
+        fit_score, fit_level, matched_skills = score_and_enrich_job(j)
+
+        # Filter out completely irrelevant / junior / incompatible roles (< 35% fit)
+        if fit_score < 35:
+            continue
+
+        j["fit_score"] = fit_score
+        j["fit_level"] = fit_level
+        j["matched_skills"] = matched_skills
+
         job_id = j.get("id") or str(len(seen_dict) + 1)
         j_record = {
             "title": j.get("title"),
@@ -409,7 +638,9 @@ def main():
             "date": j.get("date"),
             "first_seen": now_iso,
             "status": "new",
-            "fit": "high",
+            "fit": fit_level.lower(),
+            "fit_score": fit_score,
+            "matched_skills": matched_skills,
             "portal": j.get("portal", "LinkedIn"),
             "source": "cli",
         }
@@ -418,12 +649,23 @@ def main():
         stored_pairs.add((comp, tit))
         new_jobs.append(j)
 
-    print(f"[INFO] Nuevas vacantes encontradas: {len(new_jobs)}")
+    # Ordenar las vacantes encontradas por calce con el perfil (mayor compatibilidad primero)
+    new_jobs.sort(key=lambda x: x.get("fit_score", 0), reverse=True)
+
+    print(f"[INFO] Nuevas vacantes acordes al perfil encontradas: {len(new_jobs)}")
 
     if new_jobs:
-        subject = f"[AI Job Search] {len(new_jobs)} nuevas vacantes remotas encontradas ({today_str})"
+        # Generar GitHub Actions Step Summary si está disponible en el entorno
+        write_github_step_summary(new_jobs, today_str)
+
+        subject = f"[AI Job Search] {len(new_jobs)} nuevas vacantes acordes a tu perfil ({today_str})"
         html_body = generate_html_email(new_jobs, today_str)
         recipient = os.environ.get("GMAIL_USER", "ebolivar1000@gmail.com")
+
+        if args.dry_run:
+            print(f"[DRY-RUN] Simulación completada. Se enviarían {len(new_jobs)} vacantes a {recipient}.")
+            return
+
         email_sent = send_email(subject, html_body, recipient)
 
         if email_sent or args.force_save:
@@ -444,12 +686,12 @@ def main():
                     )
                     sys.exit(1)
                 else:
-                    print("::error title=Error SMTP::Falló el envío del correo con las credenciales de Gmail.", file=sys.stderr)
+                    print("::error title=Error SMTP::Falló el envío del correo con las credenciales de Gmail tras reintentos.", file=sys.stderr)
                     sys.exit(1)
             else:
                 print("[WARN] Correo no enviado; no se modificó seen_jobs.json para que las vacantes no se pierdan en futuras búsquedas.")
     else:
-        print("[INFO] No se encontraron nuevas vacantes hoy. Se omite el envío del correo.")
+        print("[INFO] No se encontraron nuevas vacantes acordes al perfil hoy.")
 
 
 if __name__ == "__main__":
