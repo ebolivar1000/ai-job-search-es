@@ -665,11 +665,17 @@ def main():
     print(f"[INFO] Nuevas vacantes acordes al perfil encontradas: {len(new_jobs)}")
 
     if new_jobs:
-        # Generar GitHub Actions Step Summary si está disponible en el entorno
+        # 1. Guardar copia local / artefacto del HTML para descarga directa
+        digest_html_file = REPO_ROOT / "job_scraper" / "daily_digest.html"
+        digest_html_file.parent.mkdir(parents=True, exist_ok=True)
+        html_body = generate_html_email(new_jobs, today_str)
+        digest_html_file.write_text(html_body, encoding="utf-8")
+        print(f"[INFO] Reporte HTML guardado en {digest_html_file}")
+
+        # 2. Generar GitHub Actions Step Summary si está disponible en el entorno
         write_github_step_summary(new_jobs, today_str)
 
         subject = f"[AI Job Search] {len(new_jobs)} nuevas vacantes acordes a tu perfil ({today_str})"
-        html_body = generate_html_email(new_jobs, today_str)
         recipient = os.environ.get("GMAIL_USER", "ebolivar1000@gmail.com")
 
         if args.dry_run:
@@ -684,20 +690,17 @@ def main():
             print(f"[INFO] Guardadas {len(new_jobs)} nuevas entradas en seen_jobs.json")
         else:
             if os.environ.get("GITHUB_ACTIONS") == "true":
-                if not os.environ.get("GMAIL_APP_PASSWORD"):
-                    print(
-                        "\n::error title=Falta secreto GMAIL_APP_PASSWORD::El secreto 'GMAIL_APP_PASSWORD' no está configurado en GitHub Secrets.\n"
-                        "Para recibir los correos diarios en tu bandeja de entrada:\n"
-                        "1. Ve a tu repositorio: Settings -> Secrets and variables -> Actions\n"
-                        "2. Haz clic en 'New repository secret'\n"
-                        "3. Nombre: GMAIL_APP_PASSWORD\n"
-                        "4. Valor: Contraseña de aplicación de Gmail (16 caracteres generada en https://myaccount.google.com/apppasswords)\n",
-                        file=sys.stderr,
-                    )
-                    sys.exit(1)
-                else:
-                    print("::error title=Error SMTP::Falló el envío del correo con las credenciales de Gmail tras reintentos.", file=sys.stderr)
-                    sys.exit(1)
+                print(
+                    "\n::error title=Credenciales de Gmail / Bloqueo de Google::Google cerró la conexión durante la autenticación SMTP.\n"
+                    "Para solucionarlo en 1 minuto:\n"
+                    "1. Ingresa a https://myaccount.google.com/apppasswords\n"
+                    "2. Genera una nueva 'Contraseña de aplicación' (nombre: 'GitHub Actions') -> Copia el código de 16 letras\n"
+                    "3. Ve a tu repositorio en GitHub: Settings -> Secrets and variables -> Actions\n"
+                    "4. Actualiza el secreto 'GMAIL_APP_PASSWORD' pegando la nueva contraseña sin espacios.\n"
+                    "Nota: La lista de 96 vacantes está disponible arriba en la pestaña 'Summary' de esta ejecución de GitHub Actions.",
+                    file=sys.stderr,
+                )
+                sys.exit(1)
             else:
                 print("[WARN] Correo no enviado; no se modificó seen_jobs.json para que las vacantes no se pierdan en futuras búsquedas.")
     else:
