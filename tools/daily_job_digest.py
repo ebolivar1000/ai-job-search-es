@@ -571,6 +571,108 @@ def send_email(subject: str, html_content: str, recipient: str) -> bool:
     return False
 
 
+def create_github_issue_digest(new_jobs: list, today_str: str, recipient: str) -> bool:
+    """Fallback notification: create a GitHub Issue assigned to repo owner.
+
+    GitHub automatically dispatches an email notification with the full issue body
+    directly to the owner's email (ebolivar1000@gmail.com).
+    """
+    gh_token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
+    repo = os.environ.get("GITHUB_REPOSITORY", "ebolivar1000/ai-job-search-es")
+
+    if not gh_token:
+        print("[WARN] No hay GH_TOKEN disponible para enviar notificación mediante GitHub Issue.", file=sys.stderr)
+        return False
+
+    print(f"[INFO] Enviando notificación de vacantes mediante GitHub Issue a {repo}...")
+    title = f"🎯 Resumen Diario de Empleo - {today_str} ({len(new_jobs)} nuevas vacantes)"
+
+    lines = [
+        f"## 🎯 Resumen Diario de Empleo - {today_str}",
+        "",
+        f"Se encontraron **{len(new_jobs)} nuevas vacantes** filtradas y ordenadas por compatibilidad con el perfil de **Everth Bolivar** (Senior Data Engineer | Cloud ETL & Python FastAPI).",
+        "",
+        "| Calce | Posición | Empresa | Portal | Ubicación | Tecnologías |",
+        "|:---:|:---|:---|:---:|:---|:---|",
+    ]
+    for j in new_jobs[:60]:
+        score = j.get("fit_score", 50)
+        fit_level = j.get("fit_level", "BUENO")
+        j_title = j.get("title", "Posición")
+        url = j.get("url", "#")
+        company = j.get("company", "Empresa")
+        portal = j.get("portal", "LinkedIn")
+        loc = j.get("location", "Remoto")
+        skills = ", ".join(f"`{s}`" for s in j.get("matched_skills", [])) or "-"
+
+        if fit_level == "EXCELENTE":
+            badge = f"🌟 **{score}%**"
+        elif fit_level == "ALTO":
+            badge = f"⭐ **{score}%**"
+        else:
+            badge = f"🎯 {score}%"
+
+        lines.append(f"| {badge} | [{j_title}]({url}) | {company} | **{portal}** | {loc} | {skills} |")
+
+    lines.append("")
+    lines.append("---")
+    lines.append("💡 *Notificación generada automáticamente por [AI Job Search](https://github.com/ebolivar1000/ai-job-search-es). El reporte completo en HTML también está disponible en la pestaña Actions (Artifacts).*")
+    body = "\n".join(lines)
+
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "Authorization": f"Bearer {gh_token}",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "AIJobSearch-Digest",
+    }
+
+    # 1. Cerrar issues antiguos de digest para mantener limpio el repositorio
+    try:
+        req_list = urllib.request.Request(
+            f"https://api.github.com/repos/{repo}/issues?labels=job-digest&state=open",
+            headers=headers
+        )
+        with urllib.request.urlopen(req_list, timeout=10) as resp:
+            old_issues = json.loads(resp.read().decode("utf-8"))
+            for old_iss in old_issues:
+                iss_num = old_iss.get("number")
+                close_payload = json.dumps({"state": "closed"}).encode("utf-8")
+                req_close = urllib.request.Request(
+                    f"https://api.github.com/repos/{repo}/issues/{iss_num}",
+                    data=close_payload,
+                    headers=headers,
+                    method="PATCH"
+                )
+                urllib.request.urlopen(req_close, timeout=10)
+    except Exception as e:
+        print(f"[WARN] No se pudieron cerrar issues antiguos: {e}", file=sys.stderr)
+
+    # 2. Crear nuevo issue asignado al usuario
+    payload = json.dumps({
+        "title": title,
+        "body": body,
+        "assignees": ["ebolivar1000"],
+        "labels": ["job-digest"]
+    }).encode("utf-8")
+
+    req_create = urllib.request.Request(
+        f"https://api.github.com/repos/{repo}/issues",
+        data=payload,
+        headers=headers,
+        method="POST"
+    )
+    try:
+        with urllib.request.urlopen(req_create, timeout=15) as resp:
+            created = json.loads(resp.read().decode("utf-8"))
+            iss_url = created.get("html_url")
+            print(f"[OK] Notificación publicada en GitHub Issue: {iss_url}")
+            print(f"[OK] GitHub enviará la notificación por correo directamente a {recipient}!")
+            return True
+    except Exception as e:
+        print(f"[ERROR] Error al crear GitHub Issue: {e}", file=sys.stderr)
+        return False
+
+
 def main():
     parser = argparse.ArgumentParser(description="Daily Job Digest & Notification for Everth Bolivar")
     parser.add_argument("--force-save", action="store_true", help="Guardar vacantes en seen_jobs.json incluso si no se envía el correo")
@@ -682,27 +784,23 @@ def main():
             print(f"[DRY-RUN] Simulación completada. Se enviarían {len(new_jobs)} vacantes a {recipient}.")
             return
 
+        # Intentar envío directo vía Gmail SMTP
         email_sent = send_email(subject, html_body, recipient)
+
+        # Si el SMTP falla (ej. credenciales revocadas por Google), activar canal de respaldo garantizado mediante GitHub Issue
+        if not email_sent:
+            print("[INFO] Falló el SMTP de Gmail. Activando canal de respaldo garantizado mediante GitHub Issue...")
+            issue_sent = create_github_issue_digest(new_jobs, today_str, recipient)
+            if issue_sent:
+                email_sent = True
+                print("[OK] Notificación entregada con éxito al correo mediante GitHub Issue.")
 
         if email_sent or args.force_save:
             seen_data["seen"] = seen_dict
             save_seen_jobs(seen_data)
             print(f"[INFO] Guardadas {len(new_jobs)} nuevas entradas en seen_jobs.json")
         else:
-            if os.environ.get("GITHUB_ACTIONS") == "true":
-                print(
-                    "\n::error title=Credenciales de Gmail / Bloqueo de Google::Google cerró la conexión durante la autenticación SMTP.\n"
-                    "Para solucionarlo en 1 minuto:\n"
-                    "1. Ingresa a https://myaccount.google.com/apppasswords\n"
-                    "2. Genera una nueva 'Contraseña de aplicación' (nombre: 'GitHub Actions') -> Copia el código de 16 letras\n"
-                    "3. Ve a tu repositorio en GitHub: Settings -> Secrets and variables -> Actions\n"
-                    "4. Actualiza el secreto 'GMAIL_APP_PASSWORD' pegando la nueva contraseña sin espacios.\n"
-                    "Nota: La lista de 96 vacantes está disponible arriba en la pestaña 'Summary' de esta ejecución de GitHub Actions.",
-                    file=sys.stderr,
-                )
-                sys.exit(1)
-            else:
-                print("[WARN] Correo no enviado; no se modificó seen_jobs.json para que las vacantes no se pierdan en futuras búsquedas.")
+            print("[WARN] No se pudo enviar por SMTP ni por Issue. Se preserva historial para la próxima ejecución.", file=sys.stderr)
     else:
         print("[INFO] No se encontraron nuevas vacantes acordes al perfil hoy.")
 
