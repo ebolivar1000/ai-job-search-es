@@ -53,12 +53,14 @@ jobs:
         run: |
           python tools/daily_job_digest.py
 
-      - name: Upload Daily HTML Digest Artifact
+      - name: Upload Daily HTML Digest Artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: daily-job-digest
-          path: job_scraper/daily_digest.html
+          name: daily-job-digests
+          path: |
+            job_scraper/daily_digest_sde.html
+            job_scraper/daily_digest_agentic.html
           if-no-files-found: ignore
           retention-days: 14
 
