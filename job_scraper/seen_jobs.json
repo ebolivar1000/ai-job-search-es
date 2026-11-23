@@ -2781,21 +2781,20 @@
       "location": "Posadas, Misiones, Argentina",
       "url": "https://ar.linkedin.com/jobs/view/ai-backend-engineer-at-entropik-4493284810",
       "date": "2026-11-21",
-      "first_seen": "2026-11-23T11:40:10.819164+00:00",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
       "status": "new",
       "fit": "excelente",
       "fit_score": 100,
       "matched_skills": [
-        "AWS / Cloud",
-        "FastAPI",
-        "Python",
-        "ETL / Pipelines",
-        "SQL / Relacional",
-        "Backend",
-        "Docker"
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
       ],
       "portal": "LinkedIn",
-      "source": "cli"
+      "profile": "agentic"
     },
     "4481020352": {
       "title": "Software Engineer Backend II",
@@ -2839,21 +2838,22 @@
       "location": "Argentina",
       "url": "https://ar.linkedin.com/jobs/view/senior-ai-developer-at-the-ritz-carlton-yacht-collection-4465772866",
       "date": "2026-11-18",
-      "first_seen": "2026-11-23T11:40:10.819164+00:00",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
       "status": "new",
       "fit": "excelente",
       "fit_score": 100,
       "matched_skills": [
-        "AWS / Cloud",
-        "FastAPI",
-        "Python",
-        "ETL / Pipelines",
-        "SQL / Relacional",
-        "Backend",
-        "Docker"
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Chatbots & WhatsApp",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL",
+        "AI Architecture"
       ],
       "portal": "LinkedIn",
-      "source": "cli"
+      "profile": "agentic"
     },
     "4490838302": {
       "title": "Python Developer",
@@ -2881,17 +2881,20 @@
       "location": "Buenos Aires, Buenos Aires Province, Argentina",
       "url": "https://ar.linkedin.com/jobs/view/ai-developer-senior-ey-gds-at-ey-4430632912",
       "date": "2026-11-22",
-      "first_seen": "2026-11-23T11:40:10.819164+00:00",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
       "status": "new",
       "fit": "excelente",
-      "fit_score": 88,
+      "fit_score": 100,
       "matched_skills": [
-        "Python",
-        "SQL / Relacional",
-        "Docker"
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
       ],
       "portal": "LinkedIn",
-      "source": "cli"
+      "profile": "agentic"
     },
     "4484966493": {
       "title": "Sr. Software Engineer - PAT Assist",
@@ -2915,19 +2918,18 @@
       "location": "Buenos Aires, Buenos Aires Province, Argentina",
       "url": "https://ar.linkedin.com/jobs/view/ai-engineer-senior-at-accusys-4491646276",
       "date": "2026-11-19",
-      "first_seen": "2026-11-23T11:40:10.819164+00:00",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
       "status": "new",
       "fit": "excelente",
       "fit_score": 100,
       "matched_skills": [
-        "AWS / Cloud",
-        "Python",
-        "ETL / Pipelines",
-        "Backend",
-        "Docker"
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
       ],
       "portal": "LinkedIn",
-      "source": "cli"
+      "profile": "agentic"
     },
     "4492210923": {
       "title": "Ssr Data Engineer",
@@ -3547,6 +3549,835 @@
       ],
       "portal": "LinkedIn",
       "profile": "sde"
+    },
+    "4481763319": {
+      "title": "AI Engineer",
+      "company": "CRAFTLabs",
+      "location": "Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ai-engineer-at-craftlabs-4481763319",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4491647210": {
+      "title": "LLM/ML Engineer",
+      "company": "Accusys",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/llm-ml-engineer-at-accusys-4491647210",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4469219292": {
+      "title": "Senior Machine Learning Engineer",
+      "company": "GoFundMe",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/senior-machine-learning-engineer-at-gofundme-4469219292",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 90,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490970001": {
+      "title": "Staff Engineer, AI R&D",
+      "company": "dLocal",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/staff-engineer-ai-r-d-at-dlocal-4490970001",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490815262": {
+      "title": "Software engineer",
+      "company": "Mercado Libre",
+      "location": "Greater Buenos Aires",
+      "url": "https://ar.linkedin.com/jobs/view/software-engineer-at-mercado-libre-4490815262",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "bueno",
+      "fit_score": 55,
+      "matched_skills": [
+        "Generative AI & LLMs"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4489755677": {
+      "title": "Artificial Intelligence Platform Engineer",
+      "company": "Mercado Libre",
+      "location": "Greater Buenos Aires",
+      "url": "https://ar.linkedin.com/jobs/view/artificial-intelligence-platform-engineer-at-mercado-libre-4489755677",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "bueno",
+      "fit_score": 55,
+      "matched_skills": [
+        "Generative AI & LLMs"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4493571419": {
+      "title": "AI Software Engineer",
+      "company": "Xploy Solutions",
+      "location": "Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ai-software-engineer-at-xploy-solutions-4493571419",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490135729": {
+      "title": "Distinguished Software Engineer, AI",
+      "company": "SecurityScorecard",
+      "location": "Cordoba, Argentina Metropolitan Area",
+      "url": "https://ar.linkedin.com/jobs/view/distinguished-software-engineer-ai-at-securityscorecard-4490135729",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492478171": {
+      "title": "Senior Machine Learning Engineer",
+      "company": "Ciklum",
+      "location": "Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/senior-machine-learning-engineer-at-ciklum-4492478171",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4481403876": {
+      "title": "Solution Architect: AI & MaaS Specialist-Alibaba Cloud Mexico",
+      "company": "Alibaba Cloud",
+      "location": "Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/solution-architect-ai-maas-specialist-alibaba-cloud-mexico-at-alibaba-cloud-4481403876",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 80,
+      "matched_skills": [
+        "AI Architecture"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4467293432": {
+      "title": "Machine Learning solutions Architect",
+      "company": "phData",
+      "location": "Latin America",
+      "url": "https://www.linkedin.com/jobs/view/machine-learning-solutions-architect-at-phdata-4467293432",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL",
+        "Automatización de Procesos",
+        "AI Architecture"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4478318089": {
+      "title": "Senior Applied AI, Partner Solutions Architect, Latin America, Applied AI Partner Solutions Architecture",
+      "company": "Amazon Web Services (AWS)",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-applied-ai-partner-solutions-architect-latin-america-applied-ai-partner-solutions-architecture-at-amazon-web-services-aws-4478318089",
+      "date": "2026-11-22",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "Cloud AWS & DevOps",
+        "AI Architecture"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4475260793": {
+      "title": "Senior Data and Artificial Intelligence - Cloud Solution",
+      "company": "Oracle",
+      "location": "Greater Buenos Aires",
+      "url": "https://ar.linkedin.com/jobs/view/senior-data-and-artificial-intelligence-cloud-solution-at-oracle-4475260793",
+      "date": "2026-11-21",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 80,
+      "matched_skills": [
+        "Generative AI & LLMs"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490105576": {
+      "title": "Business AI Platform Architect - Agentic AI",
+      "company": "SAP",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/business-ai-platform-architect-agentic-ai-at-sap-4490105576",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "AI Architecture"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492021936": {
+      "title": "Senior Python Backend Engineer",
+      "company": "Intellias",
+      "location": "Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-python-backend-engineer-at-intellias-4492021936",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "APIs RESTful & Backend",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4491325711": {
+      "title": "AI DEVELOPER",
+      "company": "SEIDOR",
+      "location": "Lima, Peru",
+      "url": "https://pe.linkedin.com/jobs/view/ai-developer-at-seidor-4491325711",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492426712": {
+      "title": "Ingeniero/a de Inteligencia Artificial Aplicada (AI Engineer)",
+      "company": "EUROVAL - Sociedad de Tasación",
+      "location": "Sant Joan d'Alacant, Valencian Community, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ingeniero-a-de-inteligencia-artificial-aplicada-ai-engineer-at-euroval-sociedad-de-tasaci%C3%B3n-4492426712",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Visión Computacional & OCR",
+        "FastAPI & Python",
+        "Bases de Datos & SQL",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490876594": {
+      "title": "AI Engineer",
+      "company": "FERO",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ai-engineer-at-fero-4490876594",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490105705": {
+      "title": "Staff AI Engineer - Madrid",
+      "company": "Oliver Bernard",
+      "location": "Greater Madrid Metropolitan Area",
+      "url": "https://es.linkedin.com/jobs/view/staff-ai-engineer-madrid-at-oliver-bernard-4490105705",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4465951930": {
+      "title": "GenAI Senior Engineer - EY GDS Spain - Hybrid",
+      "company": "EY",
+      "location": "Málaga, Andalusia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/genai-senior-engineer-ey-gds-spain-hybrid-at-ey-4465951930",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490115324": {
+      "title": "Staff AI Engineer - Barcelona",
+      "company": "Oliver Bernard",
+      "location": "Greater Barcelona Metropolitan Area",
+      "url": "https://es.linkedin.com/jobs/view/staff-ai-engineer-barcelona-at-oliver-bernard-4490115324",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490681969": {
+      "title": "AI Engineer – GenAI & Machine Learning",
+      "company": "Universidad Europea",
+      "location": "Villaviciosa de Odón, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ai-engineer-%E2%80%93-genai-machine-learning-at-universidad-europea-4490681969",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490430850": {
+      "title": "Senior Scientist – Generative AI for Workflow, Applications and Plug-ins",
+      "company": "Johnson & Johnson Innovative Medicine",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/senior-scientist-%E2%80%93-generative-ai-for-workflow-applications-and-plug-ins-at-johnson-johnson-innovative-medicine-4490430850",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490463913": {
+      "title": "AI Forward Deployment Engineer",
+      "company": "Sphera",
+      "location": "Pol, Galicia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ai-forward-deployment-engineer-at-sphera-4490463913",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490865822": {
+      "title": "Platform Engineer",
+      "company": "FERO",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/platform-engineer-at-fero-4490865822",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "alto",
+      "fit_score": 65,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492479195": {
+      "title": "Senior Analyst",
+      "company": "Mphasis",
+      "location": "Barcelona, Catalonia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/senior-analyst-at-mphasis-4492479195",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492936457": {
+      "title": "Senior Python Engineer with healthcare experience",
+      "company": "Intellias",
+      "location": "Spain",
+      "url": "https://es.linkedin.com/jobs/view/senior-python-engineer-with-healthcare-experience-at-intellias-4492936457",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "APIs RESTful & Backend",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4482891207": {
+      "title": "Senior Interoperability Engineer (Python, Kafka)",
+      "company": "Intellias",
+      "location": "Spain",
+      "url": "https://es.linkedin.com/jobs/view/senior-interoperability-engineer-python-kafka-at-intellias-4482891207",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "FastAPI & Python",
+        "APIs RESTful & Backend",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4489796337": {
+      "title": "Senior Backend Engineer (Python) - Platform",
+      "company": "SplitMetrics",
+      "location": "Barcelona, Catalonia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/senior-backend-engineer-python-platform-at-splitmetrics-4489796337",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492165362": {
+      "title": "Ingeniero/a de Inteligencia Artificial",
+      "company": "NTT DATA Europe & Latam",
+      "location": "Colombia",
+      "url": "https://co.linkedin.com/jobs/view/ingeniero-a-de-inteligencia-artificial-at-ntt-data-europe-latam-4492165362",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4480497584": {
+      "title": "Ingeniero/a de Desarrollo IA",
+      "company": "Porvenir Pensiones y Cesantías",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/ingeniero-a-de-desarrollo-ia-at-porvenir-pensiones-y-cesant%C3%ADas-4480497584",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 80,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492069755": {
+      "title": "Ingeniero Inteligencia Artificial Pereira",
+      "company": "Audifarma S.A",
+      "location": "Pereira, Risaralda, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/ingeniero-inteligencia-artificial-pereira-at-audifarma-s-a-4492069755",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4493641451": {
+      "title": "Senior AI Engineer",
+      "company": "Lumenalta",
+      "location": "Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-ai-engineer-at-lumenalta-4493641451",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "Chatbots & WhatsApp",
+        "FastAPI & Python",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4455855662": {
+      "title": "Senior AI Engineer",
+      "company": "Publicis Sapient",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-ai-engineer-at-publicis-sapient-4455855662",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4493159412": {
+      "title": "Senior AI-First Developer",
+      "company": "30X",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-ai-first-developer-at-30x-4493159412",
+      "date": "2026-11-22",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4477863810": {
+      "title": "AI Engineer",
+      "company": "Keyrus",
+      "location": "Colombia",
+      "url": "https://co.linkedin.com/jobs/view/ai-engineer-at-keyrus-4477863810",
+      "date": "2026-11-22",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490410297": {
+      "title": "Machine Learning Engineer",
+      "company": "Jobgether",
+      "location": "Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/machine-learning-engineer-at-jobgether-4490410297",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Chatbots & WhatsApp",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492518065": {
+      "title": "Ingeniero de Agentes de IA",
+      "company": "Practia",
+      "location": "Nuevo León, Mexico",
+      "url": "https://www.linkedin.com/jobs/view/4492518065",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 85,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4441419074": {
+      "title": "Sr AI ML Engineer (Remote)",
+      "company": "NTT DATA North America",
+      "location": "Guadalajara, Mexico Metropolitan Area",
+      "url": "https://mx.linkedin.com/jobs/view/sr-ai-ml-engineer-remote-at-ntt-data-north-america-4441419074",
+      "date": "2026-11-21",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4477609731": {
+      "title": "Senior Machine Learning Engineer, Ranking - Quora (Remote)",
+      "company": "Quora",
+      "location": "Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/senior-machine-learning-engineer-ranking-quora-remote-at-quora-4477609731",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "FastAPI & Python"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492983949": {
+      "title": "Senior AI Lead (GenAI & Agentic AI)",
+      "company": "Encora Inc.",
+      "location": "Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/senior-ai-lead-genai-agentic-ai-at-encora-inc-4492983949",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4419648143": {
+      "title": "Principal Software Engineer, AI",
+      "company": "Salesloft",
+      "location": "Guadalajara, Jalisco, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/principal-software-engineer-ai-at-salesloft-4419648143",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "APIs RESTful & Backend"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4475935851": {
+      "title": "Full Stack AI Engineer, Associate",
+      "company": "BlackRock",
+      "location": "Mexico City Metropolitan Area",
+      "url": "https://mx.linkedin.com/jobs/view/full-stack-ai-engineer-associate-at-blackrock-4475935851",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
     }
   },
   "seen_sde": {
@@ -7099,5 +7930,919 @@
       "profile": "sde"
     }
   },
-  "seen_agentic": {}
+  "seen_agentic": {
+    "4481763319": {
+      "title": "AI Engineer",
+      "company": "CRAFTLabs",
+      "location": "Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ai-engineer-at-craftlabs-4481763319",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4430632912": {
+      "title": "AI Developer - Senior - EY GDS",
+      "company": "EY",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ai-developer-senior-ey-gds-at-ey-4430632912",
+      "date": "2026-11-22",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4491646276": {
+      "title": "AI Engineer Senior",
+      "company": "Accusys",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ai-engineer-senior-at-accusys-4491646276",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4491647210": {
+      "title": "LLM/ML Engineer",
+      "company": "Accusys",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/llm-ml-engineer-at-accusys-4491647210",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4469219292": {
+      "title": "Senior Machine Learning Engineer",
+      "company": "GoFundMe",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/senior-machine-learning-engineer-at-gofundme-4469219292",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 90,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4465772866": {
+      "title": "Senior AI Developer",
+      "company": "The Ritz-Carlton Yacht Collection",
+      "location": "Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/senior-ai-developer-at-the-ritz-carlton-yacht-collection-4465772866",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Chatbots & WhatsApp",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL",
+        "AI Architecture"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490970001": {
+      "title": "Staff Engineer, AI R&D",
+      "company": "dLocal",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/staff-engineer-ai-r-d-at-dlocal-4490970001",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490815262": {
+      "title": "Software engineer",
+      "company": "Mercado Libre",
+      "location": "Greater Buenos Aires",
+      "url": "https://ar.linkedin.com/jobs/view/software-engineer-at-mercado-libre-4490815262",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "bueno",
+      "fit_score": 55,
+      "matched_skills": [
+        "Generative AI & LLMs"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4489755677": {
+      "title": "Artificial Intelligence Platform Engineer",
+      "company": "Mercado Libre",
+      "location": "Greater Buenos Aires",
+      "url": "https://ar.linkedin.com/jobs/view/artificial-intelligence-platform-engineer-at-mercado-libre-4489755677",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "bueno",
+      "fit_score": 55,
+      "matched_skills": [
+        "Generative AI & LLMs"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4493571419": {
+      "title": "AI Software Engineer",
+      "company": "Xploy Solutions",
+      "location": "Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ai-software-engineer-at-xploy-solutions-4493571419",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490135729": {
+      "title": "Distinguished Software Engineer, AI",
+      "company": "SecurityScorecard",
+      "location": "Cordoba, Argentina Metropolitan Area",
+      "url": "https://ar.linkedin.com/jobs/view/distinguished-software-engineer-ai-at-securityscorecard-4490135729",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4493284810": {
+      "title": "AI Backend Engineer",
+      "company": "Entropik",
+      "location": "Posadas, Misiones, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ai-backend-engineer-at-entropik-4493284810",
+      "date": "2026-11-21",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492478171": {
+      "title": "Senior Machine Learning Engineer",
+      "company": "Ciklum",
+      "location": "Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/senior-machine-learning-engineer-at-ciklum-4492478171",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4481403876": {
+      "title": "Solution Architect: AI & MaaS Specialist-Alibaba Cloud Mexico",
+      "company": "Alibaba Cloud",
+      "location": "Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/solution-architect-ai-maas-specialist-alibaba-cloud-mexico-at-alibaba-cloud-4481403876",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 80,
+      "matched_skills": [
+        "AI Architecture"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4467293432": {
+      "title": "Machine Learning solutions Architect",
+      "company": "phData",
+      "location": "Latin America",
+      "url": "https://www.linkedin.com/jobs/view/machine-learning-solutions-architect-at-phdata-4467293432",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL",
+        "Automatización de Procesos",
+        "AI Architecture"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4478318089": {
+      "title": "Senior Applied AI, Partner Solutions Architect, Latin America, Applied AI Partner Solutions Architecture",
+      "company": "Amazon Web Services (AWS)",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-applied-ai-partner-solutions-architect-latin-america-applied-ai-partner-solutions-architecture-at-amazon-web-services-aws-4478318089",
+      "date": "2026-11-22",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "Cloud AWS & DevOps",
+        "AI Architecture"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4475260793": {
+      "title": "Senior Data and Artificial Intelligence - Cloud Solution",
+      "company": "Oracle",
+      "location": "Greater Buenos Aires",
+      "url": "https://ar.linkedin.com/jobs/view/senior-data-and-artificial-intelligence-cloud-solution-at-oracle-4475260793",
+      "date": "2026-11-21",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 80,
+      "matched_skills": [
+        "Generative AI & LLMs"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490105576": {
+      "title": "Business AI Platform Architect - Agentic AI",
+      "company": "SAP",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/business-ai-platform-architect-agentic-ai-at-sap-4490105576",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "AI Architecture"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492021936": {
+      "title": "Senior Python Backend Engineer",
+      "company": "Intellias",
+      "location": "Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-python-backend-engineer-at-intellias-4492021936",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "APIs RESTful & Backend",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4491325711": {
+      "title": "AI DEVELOPER",
+      "company": "SEIDOR",
+      "location": "Lima, Peru",
+      "url": "https://pe.linkedin.com/jobs/view/ai-developer-at-seidor-4491325711",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492426712": {
+      "title": "Ingeniero/a de Inteligencia Artificial Aplicada (AI Engineer)",
+      "company": "EUROVAL - Sociedad de Tasación",
+      "location": "Sant Joan d'Alacant, Valencian Community, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ingeniero-a-de-inteligencia-artificial-aplicada-ai-engineer-at-euroval-sociedad-de-tasaci%C3%B3n-4492426712",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Visión Computacional & OCR",
+        "FastAPI & Python",
+        "Bases de Datos & SQL",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490876594": {
+      "title": "AI Engineer",
+      "company": "FERO",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ai-engineer-at-fero-4490876594",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490105705": {
+      "title": "Staff AI Engineer - Madrid",
+      "company": "Oliver Bernard",
+      "location": "Greater Madrid Metropolitan Area",
+      "url": "https://es.linkedin.com/jobs/view/staff-ai-engineer-madrid-at-oliver-bernard-4490105705",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4465951930": {
+      "title": "GenAI Senior Engineer - EY GDS Spain - Hybrid",
+      "company": "EY",
+      "location": "Málaga, Andalusia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/genai-senior-engineer-ey-gds-spain-hybrid-at-ey-4465951930",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490115324": {
+      "title": "Staff AI Engineer - Barcelona",
+      "company": "Oliver Bernard",
+      "location": "Greater Barcelona Metropolitan Area",
+      "url": "https://es.linkedin.com/jobs/view/staff-ai-engineer-barcelona-at-oliver-bernard-4490115324",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490681969": {
+      "title": "AI Engineer – GenAI & Machine Learning",
+      "company": "Universidad Europea",
+      "location": "Villaviciosa de Odón, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ai-engineer-%E2%80%93-genai-machine-learning-at-universidad-europea-4490681969",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490430850": {
+      "title": "Senior Scientist – Generative AI for Workflow, Applications and Plug-ins",
+      "company": "Johnson & Johnson Innovative Medicine",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/senior-scientist-%E2%80%93-generative-ai-for-workflow-applications-and-plug-ins-at-johnson-johnson-innovative-medicine-4490430850",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490463913": {
+      "title": "AI Forward Deployment Engineer",
+      "company": "Sphera",
+      "location": "Pol, Galicia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ai-forward-deployment-engineer-at-sphera-4490463913",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490865822": {
+      "title": "Platform Engineer",
+      "company": "FERO",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/platform-engineer-at-fero-4490865822",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "alto",
+      "fit_score": 65,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492479195": {
+      "title": "Senior Analyst",
+      "company": "Mphasis",
+      "location": "Barcelona, Catalonia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/senior-analyst-at-mphasis-4492479195",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492936457": {
+      "title": "Senior Python Engineer with healthcare experience",
+      "company": "Intellias",
+      "location": "Spain",
+      "url": "https://es.linkedin.com/jobs/view/senior-python-engineer-with-healthcare-experience-at-intellias-4492936457",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "APIs RESTful & Backend",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4482891207": {
+      "title": "Senior Interoperability Engineer (Python, Kafka)",
+      "company": "Intellias",
+      "location": "Spain",
+      "url": "https://es.linkedin.com/jobs/view/senior-interoperability-engineer-python-kafka-at-intellias-4482891207",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "FastAPI & Python",
+        "APIs RESTful & Backend",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4489796337": {
+      "title": "Senior Backend Engineer (Python) - Platform",
+      "company": "SplitMetrics",
+      "location": "Barcelona, Catalonia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/senior-backend-engineer-python-platform-at-splitmetrics-4489796337",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492165362": {
+      "title": "Ingeniero/a de Inteligencia Artificial",
+      "company": "NTT DATA Europe & Latam",
+      "location": "Colombia",
+      "url": "https://co.linkedin.com/jobs/view/ingeniero-a-de-inteligencia-artificial-at-ntt-data-europe-latam-4492165362",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4480497584": {
+      "title": "Ingeniero/a de Desarrollo IA",
+      "company": "Porvenir Pensiones y Cesantías",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/ingeniero-a-de-desarrollo-ia-at-porvenir-pensiones-y-cesant%C3%ADas-4480497584",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 80,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492069755": {
+      "title": "Ingeniero Inteligencia Artificial Pereira",
+      "company": "Audifarma S.A",
+      "location": "Pereira, Risaralda, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/ingeniero-inteligencia-artificial-pereira-at-audifarma-s-a-4492069755",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4493641451": {
+      "title": "Senior AI Engineer",
+      "company": "Lumenalta",
+      "location": "Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-ai-engineer-at-lumenalta-4493641451",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "Chatbots & WhatsApp",
+        "FastAPI & Python",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4455855662": {
+      "title": "Senior AI Engineer",
+      "company": "Publicis Sapient",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-ai-engineer-at-publicis-sapient-4455855662",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4493159412": {
+      "title": "Senior AI-First Developer",
+      "company": "30X",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-ai-first-developer-at-30x-4493159412",
+      "date": "2026-11-22",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4477863810": {
+      "title": "AI Engineer",
+      "company": "Keyrus",
+      "location": "Colombia",
+      "url": "https://co.linkedin.com/jobs/view/ai-engineer-at-keyrus-4477863810",
+      "date": "2026-11-22",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490410297": {
+      "title": "Machine Learning Engineer",
+      "company": "Jobgether",
+      "location": "Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/machine-learning-engineer-at-jobgether-4490410297",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Chatbots & WhatsApp",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492518065": {
+      "title": "Ingeniero de Agentes de IA",
+      "company": "Practia",
+      "location": "Nuevo León, Mexico",
+      "url": "https://www.linkedin.com/jobs/view/4492518065",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 85,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4441419074": {
+      "title": "Sr AI ML Engineer (Remote)",
+      "company": "NTT DATA North America",
+      "location": "Guadalajara, Mexico Metropolitan Area",
+      "url": "https://mx.linkedin.com/jobs/view/sr-ai-ml-engineer-remote-at-ntt-data-north-america-4441419074",
+      "date": "2026-11-21",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4477609731": {
+      "title": "Senior Machine Learning Engineer, Ranking - Quora (Remote)",
+      "company": "Quora",
+      "location": "Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/senior-machine-learning-engineer-ranking-quora-remote-at-quora-4477609731",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "FastAPI & Python"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492983949": {
+      "title": "Senior AI Lead (GenAI & Agentic AI)",
+      "company": "Encora Inc.",
+      "location": "Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/senior-ai-lead-genai-agentic-ai-at-encora-inc-4492983949",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4419648143": {
+      "title": "Principal Software Engineer, AI",
+      "company": "Salesloft",
+      "location": "Guadalajara, Jalisco, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/principal-software-engineer-ai-at-salesloft-4419648143",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "APIs RESTful & Backend"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4475935851": {
+      "title": "Full Stack AI Engineer, Associate",
+      "company": "BlackRock",
+      "location": "Mexico City Metropolitan Area",
+      "url": "https://mx.linkedin.com/jobs/view/full-stack-ai-engineer-associate-at-blackrock-4475935851",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T13:07:16.481440+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    }
+  }
 }
