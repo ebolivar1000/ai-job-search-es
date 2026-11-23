@@ -143,13 +143,46 @@ NEGATIVE_PATTERNS = [
     r"\b(qa\s*tester|qa\s*manual|scrum\s*master|ux|ui\s*designer)\b",
 ]
 
+# Patterns for jobs requiring advanced/fluent/conversational/bilingual English
+ADVANCED_ENGLISH_PATTERNS = [
+    r"\b(advanced|fluent|fluency|proficient|conversational|bilingual|upper[- ]intermediate|native|mandatory)\s+(in\s+|proficiency\s+in\s+)?english\b",
+    r"\benglish\s*[:\-–—]?\s*(advanced|fluent|fluency|proficient|conversational|bilingual|c1|c2|upper[- ]intermediate|native|mandatory|required|a\s+must)\b",
+    r"\benglish\s+(fluency|proficiency|speaker[s]?|is\s+a\s+must|is\s+required)\b",
+    r"\b(professional\s+working\s+proficiency\s+in\s+english)\b",
+    r"\b(strong\s+english\s+skills|good\s+command\s+of\s+english)\b",
+    r"\b(ingl[eé]s)\s*[:\-–—]?\s*(avanzado|fluido|biling[uü]e|conversacional|c1|c2|excluyente|obligatorio|mandatorio|nativo|requerido)\b",
+    r"\b(avanzado|fluido|biling[uü]e|conversacional|excluyente|obligatorio|mandatorio|nativo)\s+(en\s+)?ingl[eé]s\b",
+    r"\b(nivel\s+de\s+ingl[eé]s|dominio\s+de\s+ingl[eé]s)\s*[:\-–—]?\s*(avanzado|fluido|biling[uü]e|conversacional|c1|c2|excluyente)\b",
+    r"\b(c1|c2)\s+(english|ingl[eé]s)\b",
+    r"\b(english\s+level)\s*[:\-–—]?\s*(advanced|fluent|c1|c2|upper[- ]intermediate)\b",
+    r"\b(bilingual|biling[uü]e)\b",
+]
+
+
+def has_advanced_english_requirement(text: str) -> tuple[bool, str]:
+    """Check if text contains explicit advanced/fluent English requirements."""
+    if not text:
+        return False, ""
+    text_lower = text.lower()
+    for pat in ADVANCED_ENGLISH_PATTERNS:
+        m = re.search(pat, text_lower)
+        if m:
+            return True, m.group(0)
+    return False, ""
+
 
 def score_and_enrich_job(job: dict) -> tuple[int, str, list[str]]:
     """Score a job against Everth Bolivar's Senior Data Engineer / Python FastAPI profile."""
     title = (job.get("title") or "").strip()
     company = (job.get("company") or "").strip()
     location = (job.get("location") or "").strip()
-    text = f"{title} {company} {location}".lower()
+    description = (job.get("description") or "").strip()
+    text = f"{title} {company} {location} {description}".lower()
+
+    # Disqualification if advanced English required
+    has_eng, _ = has_advanced_english_requirement(text)
+    if has_eng:
+        return 10, "BAJO", []
 
     # Disqualification / heavy penalty for junior or unrelated stacks
     for neg in NEGATIVE_PATTERNS:
@@ -298,6 +331,29 @@ def run_linkedin_search(bun_bin: str, query: str, location: str, remote: str = "
         return []
 
 
+def fetch_linkedin_description(bun_bin: str, job_id: str) -> str:
+    """Fetch description for a LinkedIn job ID to inspect language and tech requirements."""
+    if not job_id or not str(job_id).isdigit():
+        return ""
+    cmd = [bun_bin, "run", str(LINKEDIN_CLI), "detail", str(job_id), "--format", "json"]
+    try:
+        res = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=8,
+            cwd=REPO_ROOT,
+        )
+        if res.returncode == 0 and res.stdout.strip():
+            data = json.loads(res.stdout)
+            return data.get("description") or ""
+    except Exception:
+        pass
+    return ""
+
+
 def run_getonboard_search() -> list:
     """Fetch remote positions from Get on Board API for tech & data roles in LATAM."""
     print("[INFO] Buscando vacantes en Get on Board (LATAM / Remoto)...")
@@ -331,6 +387,14 @@ def run_getonboard_search() -> list:
                             except Exception:
                                 pass
 
+                        desc_parts = [
+                            attrs.get("description", ""),
+                            attrs.get("functions", ""),
+                            attrs.get("desirable", ""),
+                            attrs.get("description_headline", ""),
+                        ]
+                        full_desc = " ".join(p for p in desc_parts if p)
+
                         job_dict = {
                             "id": f"gob_{item.get('id')}",
                             "title": title,
@@ -338,6 +402,7 @@ def run_getonboard_search() -> list:
                             "location": f"100% Remoto ({zone})",
                             "url": link,
                             "date": date_str,
+                            "description": full_desc,
                             "portal": "Get on Board",
                         }
                         results.append(job_dict)
@@ -721,6 +786,7 @@ def main():
     new_jobs = []
     now_iso = datetime.datetime.now(datetime.timezone.utc).isoformat()
     today_str = datetime.date.today().strftime("%d/%m/%Y")
+    discarded_english_count = 0
 
     for j in all_found:
         url = j.get("url", "").rstrip("/")
@@ -729,6 +795,30 @@ def main():
 
         if url in stored_urls or (comp, tit) in stored_pairs:
             continue
+
+        # 1. Filtro rápido de inglés por título y metadatos básicos
+        basic_text = f"{j.get('title', '')} {j.get('company', '')} {j.get('location', '')}"
+        has_eng, eng_term = has_advanced_english_requirement(basic_text)
+        if has_eng:
+            print(f"[FILTRO INGLÉS] Descartada '{j.get('title')}' ({j.get('company')}) por título: '{eng_term}'")
+            discarded_english_count += 1
+            continue
+
+        # 2. Si no tiene descripción (LinkedIn) y es posición candidata, consultar detalle
+        description = j.get("description", "")
+        if not description and j.get("portal") == "LinkedIn":
+            j_id = j.get("id")
+            if j_id and str(j_id).isdigit():
+                description = fetch_linkedin_description(bun_bin, str(j_id))
+                j["description"] = description
+
+        # 3. Filtro profundo de inglés en la descripción completa
+        if description:
+            has_eng_desc, eng_desc_term = has_advanced_english_requirement(description)
+            if has_eng_desc:
+                print(f"[FILTRO INGLÉS] Descartada '{j.get('title')}' ({j.get('company')}) por requisito en descripción: '{eng_desc_term}'")
+                discarded_english_count += 1
+                continue
 
         # Score job against candidate profile
         fit_score, fit_level, matched_skills = score_and_enrich_job(j)
@@ -764,6 +854,7 @@ def main():
     # Ordenar las vacantes encontradas por calce con el perfil (mayor compatibilidad primero)
     new_jobs.sort(key=lambda x: x.get("fit_score", 0), reverse=True)
 
+    print(f"[INFO] Vacantes descartadas por exigir inglés avanzado/fluido: {discarded_english_count}")
     print(f"[INFO] Nuevas vacantes acordes al perfil encontradas: {len(new_jobs)}")
 
     if new_jobs:
