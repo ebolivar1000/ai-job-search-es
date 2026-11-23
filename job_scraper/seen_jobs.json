@@ -4378,6 +4378,136 @@
       ],
       "portal": "LinkedIn",
       "profile": "agentic"
+    },
+    "4492872372": {
+      "title": "Desarrollador de Productos de Datos (SR)",
+      "company": "Talent Connect",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/desarrollador-de-productos-de-datos-sr-at-talent-connect-4492872372",
+      "date": "2026-11-21",
+      "first_seen": "2026-11-23T22:10:23.159905+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "ETL / Pipelines",
+        "Data Warehouse",
+        "Informatica / PowerCenter",
+        "SQL / Relacional",
+        "BI / Reporting"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4492908526": {
+      "title": "Ingeniero de Datos Senior",
+      "company": "Aszendit Tech",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ingeniero-de-datos-senior-at-aszendit-tech-4492908526",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T22:10:23.159905+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "Spark / PySpark",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer",
+        "BI / Reporting"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4492625304": {
+      "title": "AI Engineer",
+      "company": "Amaris Consulting | Part of Mantu",
+      "location": "Lima, Peru",
+      "url": "https://pe.linkedin.com/jobs/view/ai-engineer-at-amaris-consulting-part-of-mantu-4492625304",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-23T22:11:32.705672+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "FastAPI & Python"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492647424": {
+      "title": "Lingüista computacional Senior",
+      "company": "linkhub.ai",
+      "location": "Valencia, Valencian Community, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ling%C3%BCista-computacional-senior-at-linkhub-ai-4492647424",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-23T22:11:32.705672+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490886741": {
+      "title": "Backend Developer – Python (Full-Stack with React preferred)",
+      "company": "Tenarai Europe",
+      "location": "Sant Cugat del Vallès, Catalonia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/backend-developer-%E2%80%93-python-full-stack-with-react-preferred-at-tenarai-europe-4490886741",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T22:11:32.705672+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492194329": {
+      "title": "Backend Developer – Python (Full-Stack with React Preferred)",
+      "company": "HCLTech",
+      "location": "Sant Cugat del Vallès, Catalonia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/backend-developer-%E2%80%93-python-full-stack-with-react-preferred-at-hcltech-4492194329",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T22:11:32.705672+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492635872": {
+      "title": "AI Engineer – Generative AI & AI Agents",
+      "company": "Walmart Global Tech",
+      "location": "Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/ai-engineer-%E2%80%93-generative-ai-ai-agents-at-walmart-global-tech-4492635872",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-23T22:11:32.705672+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
     }
   },
   "seen_sde": {
@@ -7928,6 +8058,47 @@
       ],
       "portal": "LinkedIn",
       "profile": "sde"
+    },
+    "4492872372": {
+      "title": "Desarrollador de Productos de Datos (SR)",
+      "company": "Talent Connect",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/desarrollador-de-productos-de-datos-sr-at-talent-connect-4492872372",
+      "date": "2026-11-21",
+      "first_seen": "2026-11-23T22:10:23.159905+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "ETL / Pipelines",
+        "Data Warehouse",
+        "Informatica / PowerCenter",
+        "SQL / Relacional",
+        "BI / Reporting"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4492908526": {
+      "title": "Ingeniero de Datos Senior",
+      "company": "Aszendit Tech",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ingeniero-de-datos-senior-at-aszendit-tech-4492908526",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-23T22:10:23.159905+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "Spark / PySpark",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer",
+        "BI / Reporting"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
     }
   },
   "seen_agentic": {
@@ -8839,6 +9010,95 @@
         "Frontend (React/TypeScript)",
         "Cloud AWS & DevOps",
         "Bases de Datos & SQL",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492625304": {
+      "title": "AI Engineer",
+      "company": "Amaris Consulting | Part of Mantu",
+      "location": "Lima, Peru",
+      "url": "https://pe.linkedin.com/jobs/view/ai-engineer-at-amaris-consulting-part-of-mantu-4492625304",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-23T22:11:32.705672+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "FastAPI & Python"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492647424": {
+      "title": "Lingüista computacional Senior",
+      "company": "linkhub.ai",
+      "location": "Valencia, Valencian Community, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ling%C3%BCista-computacional-senior-at-linkhub-ai-4492647424",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-23T22:11:32.705672+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4490886741": {
+      "title": "Backend Developer – Python (Full-Stack with React preferred)",
+      "company": "Tenarai Europe",
+      "location": "Sant Cugat del Vallès, Catalonia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/backend-developer-%E2%80%93-python-full-stack-with-react-preferred-at-tenarai-europe-4490886741",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-23T22:11:32.705672+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492194329": {
+      "title": "Backend Developer – Python (Full-Stack with React Preferred)",
+      "company": "HCLTech",
+      "location": "Sant Cugat del Vallès, Catalonia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/backend-developer-%E2%80%93-python-full-stack-with-react-preferred-at-hcltech-4492194329",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-23T22:11:32.705672+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492635872": {
+      "title": "AI Engineer – Generative AI & AI Agents",
+      "company": "Walmart Global Tech",
+      "location": "Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/ai-engineer-%E2%80%93-generative-ai-ai-agents-at-walmart-global-tech-4492635872",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-23T22:11:32.705672+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
         "Automatización de Procesos"
       ],
       "portal": "LinkedIn",
