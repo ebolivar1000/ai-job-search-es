@@ -71,20 +71,78 @@ DISALLOWED_LOCATIONS = {
     "singapore", "new zealand", "switzerland", "sweden", "austria", "belgium", "denmark", "norway", "finland"
 }
 
-# Patterns for jobs requiring advanced/fluent/conversational/bilingual English
-ADVANCED_ENGLISH_PATTERNS = [
-    r"\b(advanced|fluent|fluency|proficient|conversational|bilingual|upper[- ]intermediate|native|mandatory)\s+(in\s+|proficiency\s+in\s+)?english\b",
-    r"\benglish\s*[:\-–—]?\s*(advanced|fluent|fluency|proficient|conversational|bilingual|c1|c2|upper[- ]intermediate|native|mandatory|required|a\s+must)\b",
-    r"\benglish\s+(fluency|proficiency|speaker[s]?|is\s+a\s+must|is\s+required)\b",
-    r"\b(professional\s+working\s+proficiency\s+in\s+english)\b",
-    r"\b(strong\s+english\s+skills|good\s+command\s+of\s+english)\b",
-    r"\b(ingl[eé]s)\s*[:\-–—]?\s*(avanzado|fluido|biling[uü]e|conversacional|c1|c2|excluyente|obligatorio|mandatorio|nativo|requerido)\b",
-    r"\b(avanzado|fluido|biling[uü]e|conversacional|excluyente|obligatorio|mandatorio|nativo)\s+(en\s+)?ingl[eé]s\b",
-    r"\b(nivel\s+de\s+ingl[eé]s|dominio\s+de\s+ingl[eé]s)\s*[:\-–—]?\s*(avanzado|fluido|biling[uü]e|conversacional|c1|c2|excluyente)\b",
-    r"\b(c1|c2)\s+(english|ingl[eé]s)\b",
-    r"\b(english\s+level)\s*[:\-–—]?\s*(advanced|fluent|c1|c2|upper[- ]intermediate)\b",
-    r"\b(bilingual|biling[uü]e)\b",
+# Patterns for jobs requiring intermediate, upper-intermediate, advanced, fluent, conversational, or bilingual English
+DISQUALIFIED_LEVEL_WORDS = [
+    r"\bintermedi(?:ate|o|a)\b",
+    r"\bupper[- ]intermediate\b",
+    r"\bintermedio[- ](?:avanzado|alto|medio)\b",
+    r"\badvance[d]?\b",
+    r"\bavanzad[oa]\b",
+    r"\bfluent\b",
+    r"\bfluency\b",
+    r"\bfluid[oa]\b",
+    r"\bfluidez\b",
+    r"\bconversation(?:al)?\b",
+    r"\bconversacion(?:al)?\b",
+    r"\bspoken\b",
+    r"\bhablad[oa]\b",
+    r"\boral\b",
+    r"\bbilingual\b",
+    r"\bbiling[uü]e\b",
+    r"\bnative\b",
+    r"\bnativ[oa]\b",
+    r"\bproficien(?:t|cy)\b",
+    r"\bdominio\b",
+    r"\bworking\s+proficiency\b",
+    r"\bprofessional\s+proficiency\b",
+    r"\bprofessional\s+working\b",
+    r"\bstrong\b",
+    r"\bs[oó]lid[oa]\b",
+    r"\bgood\b",
+    r"\bbuen[oa]?\b",
+    r"\bhigh\b",
+    r"\balt[oa]\b",
+    r"\bexcellent\b",
+    r"\bexcelente\b",
+    r"\bb1\b",
+    r"\bb2\b",
+    r"\bc1\b",
+    r"\bc2\b",
+    r"\bexcluyente\b",
+    r"\bmandatory\b",
+    r"\bmandatori[oa]\b",
+    r"\bobligatori[oa]\b",
+    r"\bindispensable\b",
+    r"\ba\s+must\b",
 ]
+
+COMPILED_DISQUALIFIED = re.compile("|".join(DISQUALIFIED_LEVEL_WORDS), re.IGNORECASE)
+
+DIRECT_DISQUALIFY_PATTERNS = [
+    r"\b(bilingual|biling[uü]e)\b",
+    r"\b(c1|c2)\s*(level|nivel)?\b",
+    r"\b(b1|b2)\s*(level|nivel)\b",
+    r"\b(english|ingl[eé]s)\s*[:\-–—]?\s*(b1|b2|c1|c2)\b",
+    r"\b(c1|c2)\s*(english|ingl[eé]s)\b",
+    r"\bcv\s+(in\s+english|en\s+ingl[eé]s)\b",
+    r"\b(submit|send)\s+(your\s+)?(cv|resume|application)\s+in\s+english\b",
+    r"\b(interview|entrevista)[s]?\s+(in\s+english|en\s+ingl[eé]s)\b",
+    r"\benglish\s+is\s+(our\s+company\s+language|used\s+for\s+any\s+business|a\s+must|required)\b",
+    r"\b(must|need\s+to)\s+speak\s+english\b",
+]
+COMPILED_DIRECT = re.compile("|".join(DIRECT_DISQUALIFY_PATTERNS), re.IGNORECASE)
+
+NEGATION_PATTERNS = re.compile(
+    r"\b(no\s+es\s+excluyente|no\s+excluyente|no\s+requerido|no\s+es\s+requisito|no\s+obligatorio|not\s+required|not\s+mandatory|no\s+indispensable)\b",
+    re.IGNORECASE
+)
+
+# Common HTML cleaner for descriptions
+def clean_html_text(text: str) -> str:
+    if not text:
+        return ""
+    no_html = re.sub(r"<[^>]+>", " ", text)
+    return re.sub(r"\s+", " ", no_html).strip()
 
 # Negative patterns that disqualify or heavily penalize junior/unrelated roles
 COMMON_NEGATIVE_PATTERNS = [
@@ -240,16 +298,48 @@ PROFILES = {
 }
 
 
-def has_advanced_english_requirement(text: str) -> tuple[bool, str]:
-    """Check if text contains explicit advanced/fluent English requirements."""
+def has_intermediate_or_higher_english(text: str) -> tuple[bool, str]:
+    """Check if text requires English skills equal to or higher than Intermediate (B1, B2, C1, C2, etc.)."""
     if not text:
         return False, ""
-    text_lower = text.lower()
-    for pat in ADVANCED_ENGLISH_PATTERNS:
-        m = re.search(pat, text_lower)
-        if m:
-            return True, m.group(0)
+
+    clean_text = clean_html_text(text)
+
+    # 1. Direct standalone patterns
+    m_direct = COMPILED_DIRECT.search(clean_text)
+    if m_direct:
+        start = max(0, m_direct.start() - 20)
+        prefix = clean_text[start:m_direct.start()].lower()
+        if not re.search(r"\b(no|not|sin)\s+$", prefix):
+            return True, f"direct: {m_direct.group(0)}"
+
+    # 2. Segments / bullet points
+    segments = re.split(r"[.\n\r;•\-\|\*\<\>]+", clean_text)
+    for seg in segments:
+        seg_lower = seg.lower()
+        if "english" in seg_lower or "inglés" in seg_lower or "ingles" in seg_lower:
+            if NEGATION_PATTERNS.search(seg_lower):
+                continue
+            m = COMPILED_DISQUALIFIED.search(seg_lower)
+            if m:
+                return True, f"segment '{seg.strip()[:60]}' -> '{m.group(0)}'"
+
+    # 3. Proximity window around English mentions (only if not negated)
+    proximity_pattern = re.compile(
+        r"(?:(?P<pre>" + "|".join(DISQUALIFIED_LEVEL_WORDS) + r")\W+(?:\w+\W+){0,6}(?:english|ingl[eé]s|ingles))|"
+        r"(?:(?:english|ingl[eé]s|ingles)\W+(?:\w+\W+){0,6}(?P<post>" + "|".join(DISQUALIFIED_LEVEL_WORDS) + r"))",
+        re.IGNORECASE
+    )
+    for m in proximity_pattern.finditer(clean_text):
+        matched_span = clean_text[max(0, m.start() - 25):min(len(clean_text), m.end() + 25)]
+        if not NEGATION_PATTERNS.search(matched_span):
+            return True, f"proximity: {m.group(0)}"
+
     return False, ""
+
+
+# Backward-compatible alias
+has_advanced_english_requirement = has_intermediate_or_higher_english
 
 
 def score_and_enrich_job(job: dict, profile_key: str) -> tuple[int, str, list[str]]:
@@ -431,7 +521,7 @@ def fetch_linkedin_description(bun_bin: str, job_id: str) -> str:
             text=True,
             encoding="utf-8",
             errors="replace",
-            timeout=8,
+            timeout=12,
             cwd=REPO_ROOT,
         )
         if res.returncode == 0 and res.stdout.strip():
@@ -480,6 +570,9 @@ def run_getonboard_search(categories: list, keywords: list) -> list:
                             attrs.get("functions", ""),
                             attrs.get("desirable", ""),
                             attrs.get("description_headline", ""),
+                            attrs.get("projects", ""),
+                            attrs.get("benefits", ""),
+                            attrs.get("seniority", ""),
                         ]
                         full_desc = " ".join(p for p in desc_parts if p)
 
@@ -927,7 +1020,7 @@ def execute_profile_search(profile_key: str, bun_bin: str, seen_dict: dict, dry_
     # Ordenar por afinidad
     new_jobs.sort(key=lambda x: x.get("fit_score", 0), reverse=True)
 
-    print(f"[INFO] [{profile_key.upper()}] Vacantes descartadas por exigir inglés avanzado/fluido: {discarded_english_count}")
+    print(f"[INFO] [{profile_key.upper()}] Vacantes descartadas por exigir inglés intermedio o superior: {discarded_english_count}")
     print(f"[INFO] [{profile_key.upper()}] Nuevas vacantes acordes encontradas: {len(new_jobs)}")
 
     if new_jobs:
