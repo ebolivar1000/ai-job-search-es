@@ -4508,6 +4508,504 @@
       ],
       "portal": "LinkedIn",
       "profile": "agentic"
+    },
+    "4493049245": {
+      "title": "Desarrollador de datos",
+      "company": "Sofre Digital SA",
+      "location": "Greater Buenos Aires",
+      "url": "https://ar.linkedin.com/jobs/view/desarrollador-de-datos-at-sofre-digital-sa-4493049245",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "alto",
+      "fit_score": 65,
+      "matched_skills": [
+        "Data Warehouse",
+        "SQL / Relacional",
+        "BI / Reporting"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4494384773": {
+      "title": "Desarrollador de Productos de Datos (SR)- IICS- Teradata",
+      "company": "Rocket Stars",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/desarrollador-de-productos-de-datos-sr-iics-teradata-at-rocket-stars-4494384773",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "ETL / Pipelines",
+        "Informatica / PowerCenter",
+        "SQL / Relacional",
+        "BI / Reporting"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4493042693": {
+      "title": "Ingeniero de datos",
+      "company": "Adecco",
+      "location": "Gobernador Crespo, Santa Fe, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ingeniero-de-datos-at-adecco-4493042693",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4494301036": {
+      "title": "Analytics Engineer",
+      "company": "NexusLeap",
+      "location": "Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/analytics-engineer-at-nexusleap-4494301036",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "AWS / Cloud",
+        "Airflow",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Analytics Engineer",
+        "BI / Reporting"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4476512692": {
+      "title": "Ingeniero/a de Datos - Córdoba",
+      "company": "Holcim Argentina",
+      "location": "Cordoba, Córdoba, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ingeniero-a-de-datos-c%C3%B3rdoba-at-holcim-argentina-4476512692",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Airflow",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4494399200": {
+      "title": "Azure Data Engineer - Ica/Chimbote/Pasco",
+      "company": "NTT DATA Europe & Latam",
+      "location": "Trujillo, La Libertad, Peru",
+      "url": "https://pe.linkedin.com/jobs/view/azure-data-engineer-ica-chimbote-pasco-at-ntt-data-europe-latam-4494399200",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "AWS / Cloud",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4492969692": {
+      "title": "Data Engineer (Azure Databricks + Python) - Remote Work | REF#294137",
+      "company": "BairesDev",
+      "location": "Guayas, Ecuador",
+      "url": "https://ec.linkedin.com/jobs/view/data-engineer-azure-databricks-%2B-python-remote-work-ref%23294137-at-bairesdev-4492969692",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "Databricks",
+        "Python",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4494418154": {
+      "title": "Data Engineer AWS",
+      "company": "AVOS Tech | Chile",
+      "location": "Las Condes, Santiago Metropolitan Region, Chile",
+      "url": "https://cl.linkedin.com/jobs/view/data-engineer-aws-at-avos-tech-chile-4494418154",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "AWS / Cloud",
+        "Airflow",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4493021627": {
+      "title": "Data Engineer | Databricks & AWS",
+      "company": "SEREM Consultoría Empresarial",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/data-engineer-databricks-aws-at-serem-consultor%C3%ADa-empresarial-4493021627",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "AWS / Cloud",
+        "ETL / Pipelines",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4494125745": {
+      "title": "Data Engineer (Python / PySpark)",
+      "company": "Arelance",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/data-engineer-python-pyspark-at-arelance-4494125745",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "AWS / Cloud",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4494084393": {
+      "title": "Senior Data Engineer (Snowflake, DBT & Python)",
+      "company": "Capgemini Engineering",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-data-engineer-snowflake-dbt-python-at-capgemini-engineering-4494084393",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Snowflake",
+        "AWS / Cloud",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "Data Warehouse",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4481037549": {
+      "title": "Data Engineer Sr.",
+      "company": "Stefanini LATAM",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/data-engineer-sr-at-stefanini-latam-4481037549",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Data Engineer",
+        "BI / Reporting",
+        "Big Data"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4492995703": {
+      "title": "Senior Data Engineer",
+      "company": "Qubika",
+      "location": "Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/senior-data-engineer-at-qubika-4492995703",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "Spark / PySpark",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4414690382": {
+      "title": "Senior Data Engineer",
+      "company": "Salesforce",
+      "location": "Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/senior-data-engineer-at-salesforce-4414690382",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Snowflake",
+        "AWS / Cloud",
+        "Airflow",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4414193803": {
+      "title": "Software Engineer - AI Systems",
+      "company": "XBOW",
+      "location": "Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/software-engineer-ai-systems-at-xbow-4414193803",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "Frontend (React/TypeScript)"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4484403488": {
+      "title": "Machine Learning Engineer, Fraud & Abuse Detection",
+      "company": "Telnyx",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/machine-learning-engineer-fraud-abuse-detection-at-telnyx-4484403488",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 90,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4493050081": {
+      "title": "Desarrollador/a",
+      "company": "Municipalidad de Vicente Lopez",
+      "location": "Vicente López, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/desarrollador-a-at-municipalidad-de-vicente-lopez-4493050081",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Chatbots & WhatsApp",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4482280269": {
+      "title": "CFA Agentic AI Product Manager - People Solutions, People & Organization Growth",
+      "company": "SAP",
+      "location": "Greater Buenos Aires",
+      "url": "https://ar.linkedin.com/jobs/view/cfa-agentic-ai-product-manager-people-solutions-people-organization-growth-at-sap-4482280269",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492657535": {
+      "title": "Desarrollador de IA Agéntica",
+      "company": "Getdata (CL)",
+      "location": "Providencia, Santiago Metropolitan Region, Chile",
+      "url": "https://cl.linkedin.com/jobs/view/desarrollador-de-ia-ag%C3%A9ntica-at-getdata-cl-4492657535",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4486845832": {
+      "title": "AI Software Engineer-Planta Ford Irapuato",
+      "company": "Ford Motor Company",
+      "location": "Irapuato, Guanajuato, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/ai-software-engineer-planta-ford-irapuato-at-ford-motor-company-4486845832",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "APIs RESTful & Backend",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4491792667": {
+      "title": "🚀 AI / Machine Learning Engineer",
+      "company": "Tewis",
+      "location": "Náquera, Valencian Community, Spain",
+      "url": "https://es.linkedin.com/jobs/view/%F0%9F%9A%80-ai-machine-learning-engineer-at-tewis-4491792667",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492009351": {
+      "title": "GenAI Engineer – Google Cloud",
+      "company": "Scalian",
+      "location": "Spain",
+      "url": "https://es.linkedin.com/jobs/view/genai-engineer-%E2%80%93-google-cloud-at-scalian-4492009351",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4493037336": {
+      "title": "Senior AI Engineer – IA Generativa y Agentes de IA | Pereira, Colombia",
+      "company": "Gattaca",
+      "location": "Pereira, Risaralda, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-ai-engineer-%E2%80%93-ia-generativa-y-agentes-de-ia-pereira-colombia-at-gattaca-4493037336",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Bases de Datos & SQL",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4478387666": {
+      "title": "Lead AI Product Engineer",
+      "company": "Aon",
+      "location": "Mexico City, Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/lead-ai-product-engineer-at-aon-4478387666",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4493989213": {
+      "title": "Senior AI Engineer",
+      "company": "Capgemini Engineering",
+      "location": "Aguascalientes, Aguascalientes, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/senior-ai-engineer-at-capgemini-engineering-4493989213",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
     }
   },
   "seen_sde": {
@@ -8099,6 +8597,293 @@
       ],
       "portal": "LinkedIn",
       "profile": "sde"
+    },
+    "4493049245": {
+      "title": "Desarrollador de datos",
+      "company": "Sofre Digital SA",
+      "location": "Greater Buenos Aires",
+      "url": "https://ar.linkedin.com/jobs/view/desarrollador-de-datos-at-sofre-digital-sa-4493049245",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "alto",
+      "fit_score": 65,
+      "matched_skills": [
+        "Data Warehouse",
+        "SQL / Relacional",
+        "BI / Reporting"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4494384773": {
+      "title": "Desarrollador de Productos de Datos (SR)- IICS- Teradata",
+      "company": "Rocket Stars",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/desarrollador-de-productos-de-datos-sr-iics-teradata-at-rocket-stars-4494384773",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "ETL / Pipelines",
+        "Informatica / PowerCenter",
+        "SQL / Relacional",
+        "BI / Reporting"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4493042693": {
+      "title": "Ingeniero de datos",
+      "company": "Adecco",
+      "location": "Gobernador Crespo, Santa Fe, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ingeniero-de-datos-at-adecco-4493042693",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4494301036": {
+      "title": "Analytics Engineer",
+      "company": "NexusLeap",
+      "location": "Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/analytics-engineer-at-nexusleap-4494301036",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "AWS / Cloud",
+        "Airflow",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Analytics Engineer",
+        "BI / Reporting"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4476512692": {
+      "title": "Ingeniero/a de Datos - Córdoba",
+      "company": "Holcim Argentina",
+      "location": "Cordoba, Córdoba, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ingeniero-a-de-datos-c%C3%B3rdoba-at-holcim-argentina-4476512692",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Airflow",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4494399200": {
+      "title": "Azure Data Engineer - Ica/Chimbote/Pasco",
+      "company": "NTT DATA Europe & Latam",
+      "location": "Trujillo, La Libertad, Peru",
+      "url": "https://pe.linkedin.com/jobs/view/azure-data-engineer-ica-chimbote-pasco-at-ntt-data-europe-latam-4494399200",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "AWS / Cloud",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4492969692": {
+      "title": "Data Engineer (Azure Databricks + Python) - Remote Work | REF#294137",
+      "company": "BairesDev",
+      "location": "Guayas, Ecuador",
+      "url": "https://ec.linkedin.com/jobs/view/data-engineer-azure-databricks-%2B-python-remote-work-ref%23294137-at-bairesdev-4492969692",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "Databricks",
+        "Python",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4494418154": {
+      "title": "Data Engineer AWS",
+      "company": "AVOS Tech | Chile",
+      "location": "Las Condes, Santiago Metropolitan Region, Chile",
+      "url": "https://cl.linkedin.com/jobs/view/data-engineer-aws-at-avos-tech-chile-4494418154",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "AWS / Cloud",
+        "Airflow",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4493021627": {
+      "title": "Data Engineer | Databricks & AWS",
+      "company": "SEREM Consultoría Empresarial",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/data-engineer-databricks-aws-at-serem-consultor%C3%ADa-empresarial-4493021627",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "AWS / Cloud",
+        "ETL / Pipelines",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4494125745": {
+      "title": "Data Engineer (Python / PySpark)",
+      "company": "Arelance",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/data-engineer-python-pyspark-at-arelance-4494125745",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "AWS / Cloud",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4494084393": {
+      "title": "Senior Data Engineer (Snowflake, DBT & Python)",
+      "company": "Capgemini Engineering",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-data-engineer-snowflake-dbt-python-at-capgemini-engineering-4494084393",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Snowflake",
+        "AWS / Cloud",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "Data Warehouse",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4481037549": {
+      "title": "Data Engineer Sr.",
+      "company": "Stefanini LATAM",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/data-engineer-sr-at-stefanini-latam-4481037549",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Data Engineer",
+        "BI / Reporting",
+        "Big Data"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4492995703": {
+      "title": "Senior Data Engineer",
+      "company": "Qubika",
+      "location": "Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/senior-data-engineer-at-qubika-4492995703",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "Spark / PySpark",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4414690382": {
+      "title": "Senior Data Engineer",
+      "company": "Salesforce",
+      "location": "Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/senior-data-engineer-at-salesforce-4414690382",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:45:55.499454+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Snowflake",
+        "AWS / Cloud",
+        "Airflow",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
     }
   },
   "seen_agentic": {
@@ -9100,6 +9885,217 @@
         "Flujos Agénticos / Multi-Agent",
         "Generative AI & LLMs",
         "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4414193803": {
+      "title": "Software Engineer - AI Systems",
+      "company": "XBOW",
+      "location": "Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/software-engineer-ai-systems-at-xbow-4414193803",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "Frontend (React/TypeScript)"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4484403488": {
+      "title": "Machine Learning Engineer, Fraud & Abuse Detection",
+      "company": "Telnyx",
+      "location": "Buenos Aires, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/machine-learning-engineer-fraud-abuse-detection-at-telnyx-4484403488",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 90,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4493050081": {
+      "title": "Desarrollador/a",
+      "company": "Municipalidad de Vicente Lopez",
+      "location": "Vicente López, Buenos Aires Province, Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/desarrollador-a-at-municipalidad-de-vicente-lopez-4493050081",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Chatbots & WhatsApp",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4482280269": {
+      "title": "CFA Agentic AI Product Manager - People Solutions, People & Organization Growth",
+      "company": "SAP",
+      "location": "Greater Buenos Aires",
+      "url": "https://ar.linkedin.com/jobs/view/cfa-agentic-ai-product-manager-people-solutions-people-organization-growth-at-sap-4482280269",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492657535": {
+      "title": "Desarrollador de IA Agéntica",
+      "company": "Getdata (CL)",
+      "location": "Providencia, Santiago Metropolitan Region, Chile",
+      "url": "https://cl.linkedin.com/jobs/view/desarrollador-de-ia-ag%C3%A9ntica-at-getdata-cl-4492657535",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4486845832": {
+      "title": "AI Software Engineer-Planta Ford Irapuato",
+      "company": "Ford Motor Company",
+      "location": "Irapuato, Guanajuato, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/ai-software-engineer-planta-ford-irapuato-at-ford-motor-company-4486845832",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "APIs RESTful & Backend",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4491792667": {
+      "title": "🚀 AI / Machine Learning Engineer",
+      "company": "Tewis",
+      "location": "Náquera, Valencian Community, Spain",
+      "url": "https://es.linkedin.com/jobs/view/%F0%9F%9A%80-ai-machine-learning-engineer-at-tewis-4491792667",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 95,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4492009351": {
+      "title": "GenAI Engineer – Google Cloud",
+      "company": "Scalian",
+      "location": "Spain",
+      "url": "https://es.linkedin.com/jobs/view/genai-engineer-%E2%80%93-google-cloud-at-scalian-4492009351",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4493037336": {
+      "title": "Senior AI Engineer – IA Generativa y Agentes de IA | Pereira, Colombia",
+      "company": "Gattaca",
+      "location": "Pereira, Risaralda, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-ai-engineer-%E2%80%93-ia-generativa-y-agentes-de-ia-pereira-colombia-at-gattaca-4493037336",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Bases de Datos & SQL",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4478387666": {
+      "title": "Lead AI Product Engineer",
+      "company": "Aon",
+      "location": "Mexico City, Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/lead-ai-product-engineer-at-aon-4478387666",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "FastAPI & Python",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4493989213": {
+      "title": "Senior AI Engineer",
+      "company": "Capgemini Engineering",
+      "location": "Aguascalientes, Aguascalientes, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/senior-ai-engineer-at-capgemini-engineering-4493989213",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-24T20:46:56.613922+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs"
       ],
       "portal": "LinkedIn",
       "profile": "agentic"
