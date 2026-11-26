@@ -5130,12 +5130,12 @@
       "profile": "sde"
     },
     "4493421018": {
-      "title": "Senior Databricks Engineer",
+      "title": "Senior Data Engineer",
       "company": "Tenth Revolution Group",
       "location": "Madrid, Community of Madrid, Spain",
-      "url": "https://es.linkedin.com/jobs/view/senior-databricks-engineer-at-tenth-revolution-group-4493421018",
+      "url": "https://es.linkedin.com/jobs/view/senior-data-engineer-at-tenth-revolution-group-4493421018",
       "date": "2026-11-25",
-      "first_seen": "2026-11-25T20:02:29.595828+00:00",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
       "status": "new",
       "fit": "excelente",
       "fit_score": 100,
@@ -5380,6 +5380,344 @@
         "FastAPI & Python",
         "Cloud AWS & DevOps",
         "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4495537284": {
+      "title": "Data Engineer Azure + Databricks",
+      "company": "Indra Group",
+      "location": "La Molina, Peru",
+      "url": "https://pe.linkedin.com/jobs/view/data-engineer-azure-%2B-databricks-at-indra-group-4495537284",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "AWS / Cloud",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4461295907": {
+      "title": "Data Engineer",
+      "company": "AspenView Technology Partners",
+      "location": "Latin America",
+      "url": "https://www.linkedin.com/jobs/view/data-engineer-at-aspenview-technology-partners-4461295907",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Snowflake",
+        "Python",
+        "ETL / Pipelines",
+        "Data Warehouse",
+        "SQL / Relacional",
+        "Data Engineer",
+        "BI / Reporting"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4402896499": {
+      "title": "Lead Data Engineer",
+      "company": "Omya",
+      "location": "Barcelona, Catalonia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/lead-data-engineer-at-omya-4402896499",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "ETL / Pipelines",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4495283743": {
+      "title": "Data Engineer Senior",
+      "company": "Paradigma Digital",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/data-engineer-senior-at-paradigma-digital-4495283743",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Spark / PySpark",
+        "ETL / Pipelines",
+        "Data Warehouse",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4495218742": {
+      "title": "Senior Data Engineer",
+      "company": "Wizeline",
+      "location": "Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-data-engineer-at-wizeline-4495218742",
+      "date": "2026-11-25",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Snowflake",
+        "AWS / Cloud",
+        "Airflow",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4487288926": {
+      "title": "Senior AWS Data Engineer – Data Migration & Automation",
+      "company": "Inetum",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-aws-data-engineer-%E2%80%93-data-migration-automation-at-inetum-4487288926",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "AWS / Cloud",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "Data Warehouse",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4492639374": {
+      "title": "IT Data Engineer II MXT",
+      "company": "Tyson Mexico",
+      "location": "El Fresno, Coahuila, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/it-data-engineer-ii-mxt-at-tyson-mexico-4492639374",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Snowflake",
+        "Spark / PySpark",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer",
+        "Big Data"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4492773403": {
+      "title": "Ingeniero de Datos Senior (Data Engineer)",
+      "company": "Sector Inmobilario",
+      "location": "Villas de Tecámac, México, Mexico",
+      "url": "https://www.linkedin.com/jobs/view/4492773403",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "AWS / Cloud",
+        "Python",
+        "ETL / Pipelines",
+        "Data Warehouse",
+        "SQL / Relacional",
+        "Data Engineer",
+        "BI / Reporting",
+        "Big Data"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4491959285": {
+      "title": "ML / AI Engineer",
+      "company": "VON DER HEIDE",
+      "location": "Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ml-ai-engineer-at-von-der-heide-4491959285",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4485507420": {
+      "title": "Senior Software Engineer (Python) - Remote",
+      "company": "Mitratech",
+      "location": "Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/senior-software-engineer-python-remote-at-mitratech-4485507420",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4495551048": {
+      "title": "AI Engineer",
+      "company": "Allianz Partners",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ai-engineer-at-allianz-partners-4495551048",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4495290363": {
+      "title": "AI and Agency Engineer (m/f/d)",
+      "company": "Deutsche Telekom",
+      "location": "A Coruña, Galicia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ai-and-agency-engineer-m-f-d-at-deutsche-telekom-4495290363",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "alto",
+      "fit_score": 70,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4495281373": {
+      "title": "Python Engineer",
+      "company": "IBU",
+      "location": "Sant Cugat del Vallès, Catalonia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/python-engineer-at-ibu-4495281373",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 80,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4495265846": {
+      "title": "Senior Backend engineer",
+      "company": "Q-tech",
+      "location": "Valladolid, Castilla and Leon, Spain",
+      "url": "https://es.linkedin.com/jobs/view/senior-backend-engineer-at-q-tech-4495265846",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "FastAPI & Python",
+        "APIs RESTful & Backend",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4495029320": {
+      "title": "Programador Python y GCP",
+      "company": "Sectorea",
+      "location": "Spain",
+      "url": "https://es.linkedin.com/jobs/view/programador-python-y-gcp-at-sectorea-4495029320",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "bueno",
+      "fit_score": 60,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4494967579": {
+      "title": "Conversational AI & Integration Software Engineer",
+      "company": "Accenture México",
+      "location": "Mexico City, Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/conversational-ai-integration-software-engineer-at-accenture-m%C3%A9xico-4494967579",
+      "date": "2026-11-25",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 80,
+      "matched_skills": [
+        "LLM Providers (Claude/OpenAI)",
+        "Chatbots & WhatsApp",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4494969573": {
+      "title": "Conversational AI & Integration Software Engineer Copy 01",
+      "company": "Accenture México",
+      "location": "Mexico City, Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/conversational-ai-integration-software-engineer-copy-01-at-accenture-m%C3%A9xico-4494969573",
+      "date": "2026-11-25",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 80,
+      "matched_skills": [
+        "LLM Providers (Claude/OpenAI)",
+        "Chatbots & WhatsApp",
+        "Automatización de Procesos"
       ],
       "portal": "LinkedIn",
       "profile": "agentic"
@@ -9385,12 +9723,12 @@
       "profile": "sde"
     },
     "4493421018": {
-      "title": "Senior Databricks Engineer",
+      "title": "Senior Data Engineer",
       "company": "Tenth Revolution Group",
       "location": "Madrid, Community of Madrid, Spain",
-      "url": "https://es.linkedin.com/jobs/view/senior-databricks-engineer-at-tenth-revolution-group-4493421018",
+      "url": "https://es.linkedin.com/jobs/view/senior-data-engineer-at-tenth-revolution-group-4493421018",
       "date": "2026-11-25",
-      "first_seen": "2026-11-25T20:02:29.595828+00:00",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
       "status": "new",
       "fit": "excelente",
       "fit_score": 100,
@@ -9420,6 +9758,175 @@
         "Data Warehouse",
         "SQL / Relacional",
         "Data Engineer",
+        "Big Data"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4495537284": {
+      "title": "Data Engineer Azure + Databricks",
+      "company": "Indra Group",
+      "location": "La Molina, Peru",
+      "url": "https://pe.linkedin.com/jobs/view/data-engineer-azure-%2B-databricks-at-indra-group-4495537284",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "AWS / Cloud",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4461295907": {
+      "title": "Data Engineer",
+      "company": "AspenView Technology Partners",
+      "location": "Latin America",
+      "url": "https://www.linkedin.com/jobs/view/data-engineer-at-aspenview-technology-partners-4461295907",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Snowflake",
+        "Python",
+        "ETL / Pipelines",
+        "Data Warehouse",
+        "SQL / Relacional",
+        "Data Engineer",
+        "BI / Reporting"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4402896499": {
+      "title": "Lead Data Engineer",
+      "company": "Omya",
+      "location": "Barcelona, Catalonia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/lead-data-engineer-at-omya-4402896499",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Databricks",
+        "ETL / Pipelines",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4495283743": {
+      "title": "Data Engineer Senior",
+      "company": "Paradigma Digital",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/data-engineer-senior-at-paradigma-digital-4495283743",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Spark / PySpark",
+        "ETL / Pipelines",
+        "Data Warehouse",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4495218742": {
+      "title": "Senior Data Engineer",
+      "company": "Wizeline",
+      "location": "Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-data-engineer-at-wizeline-4495218742",
+      "date": "2026-11-25",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Snowflake",
+        "AWS / Cloud",
+        "Airflow",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4487288926": {
+      "title": "Senior AWS Data Engineer – Data Migration & Automation",
+      "company": "Inetum",
+      "location": "Bogota, D.C., Capital District, Colombia",
+      "url": "https://co.linkedin.com/jobs/view/senior-aws-data-engineer-%E2%80%93-data-migration-automation-at-inetum-4487288926",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "AWS / Cloud",
+        "Spark / PySpark",
+        "Python",
+        "ETL / Pipelines",
+        "Data Warehouse",
+        "SQL / Relacional",
+        "Data Engineer"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4492639374": {
+      "title": "IT Data Engineer II MXT",
+      "company": "Tyson Mexico",
+      "location": "El Fresno, Coahuila, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/it-data-engineer-ii-mxt-at-tyson-mexico-4492639374",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Snowflake",
+        "Spark / PySpark",
+        "ETL / Pipelines",
+        "SQL / Relacional",
+        "Data Engineer",
+        "Big Data"
+      ],
+      "portal": "LinkedIn",
+      "profile": "sde"
+    },
+    "4492773403": {
+      "title": "Ingeniero de Datos Senior (Data Engineer)",
+      "company": "Sector Inmobilario",
+      "location": "Villas de Tecámac, México, Mexico",
+      "url": "https://www.linkedin.com/jobs/view/4492773403",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-26T19:45:09.159042+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "AWS / Cloud",
+        "Python",
+        "ETL / Pipelines",
+        "Data Warehouse",
+        "SQL / Relacional",
+        "Data Engineer",
+        "BI / Reporting",
         "Big Data"
       ],
       "portal": "LinkedIn",
@@ -10850,6 +11357,175 @@
         "FastAPI & Python",
         "Cloud AWS & DevOps",
         "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4491959285": {
+      "title": "ML / AI Engineer",
+      "company": "VON DER HEIDE",
+      "location": "Argentina",
+      "url": "https://ar.linkedin.com/jobs/view/ml-ai-engineer-at-von-der-heide-4491959285",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "Cloud AWS & DevOps"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4485507420": {
+      "title": "Senior Software Engineer (Python) - Remote",
+      "company": "Mitratech",
+      "location": "Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/senior-software-engineer-python-remote-at-mitratech-4485507420",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4495551048": {
+      "title": "AI Engineer",
+      "company": "Allianz Partners",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ai-engineer-at-allianz-partners-4495551048",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "Generative AI & LLMs",
+        "LLM Providers (Claude/OpenAI)",
+        "FastAPI & Python",
+        "Cloud AWS & DevOps",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4495290363": {
+      "title": "AI and Agency Engineer (m/f/d)",
+      "company": "Deutsche Telekom",
+      "location": "A Coruña, Galicia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/ai-and-agency-engineer-m-f-d-at-deutsche-telekom-4495290363",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "alto",
+      "fit_score": 70,
+      "matched_skills": [
+        "Flujos Agénticos / Multi-Agent",
+        "Generative AI & LLMs"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4495281373": {
+      "title": "Python Engineer",
+      "company": "IBU",
+      "location": "Sant Cugat del Vallès, Catalonia, Spain",
+      "url": "https://es.linkedin.com/jobs/view/python-engineer-at-ibu-4495281373",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 80,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4495265846": {
+      "title": "Senior Backend engineer",
+      "company": "Q-tech",
+      "location": "Valladolid, Castilla and Leon, Spain",
+      "url": "https://es.linkedin.com/jobs/view/senior-backend-engineer-at-q-tech-4495265846",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 100,
+      "matched_skills": [
+        "FastAPI & Python",
+        "APIs RESTful & Backend",
+        "Cloud AWS & DevOps",
+        "Bases de Datos & SQL"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4495029320": {
+      "title": "Programador Python y GCP",
+      "company": "Sectorea",
+      "location": "Spain",
+      "url": "https://es.linkedin.com/jobs/view/programador-python-y-gcp-at-sectorea-4495029320",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "bueno",
+      "fit_score": 60,
+      "matched_skills": [
+        "FastAPI & Python",
+        "Frontend (React/TypeScript)"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4494967579": {
+      "title": "Conversational AI & Integration Software Engineer",
+      "company": "Accenture México",
+      "location": "Mexico City, Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/conversational-ai-integration-software-engineer-at-accenture-m%C3%A9xico-4494967579",
+      "date": "2026-11-25",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 80,
+      "matched_skills": [
+        "LLM Providers (Claude/OpenAI)",
+        "Chatbots & WhatsApp",
+        "Automatización de Procesos"
+      ],
+      "portal": "LinkedIn",
+      "profile": "agentic"
+    },
+    "4494969573": {
+      "title": "Conversational AI & Integration Software Engineer Copy 01",
+      "company": "Accenture México",
+      "location": "Mexico City, Mexico City, Mexico",
+      "url": "https://mx.linkedin.com/jobs/view/conversational-ai-integration-software-engineer-copy-01-at-accenture-m%C3%A9xico-4494969573",
+      "date": "2026-11-25",
+      "first_seen": "2026-11-26T19:46:15.852035+00:00",
+      "status": "new",
+      "fit": "excelente",
+      "fit_score": 80,
+      "matched_skills": [
+        "LLM Providers (Claude/OpenAI)",
+        "Chatbots & WhatsApp",
+        "Automatización de Procesos"
       ],
       "portal": "LinkedIn",
       "profile": "agentic"
